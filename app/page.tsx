@@ -201,12 +201,12 @@ export default function Home() {
 
       <header className="sticky top-0 z-50 border-b border-[#e8e1d8] bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8 lg:px-10">
-          <a href="#" className="flex items-center gap-3" aria-label="Imaginaria home">
+          <a href="#" className="flex items-center gap-3" aria-label="Kinesysprototypes home">
             <span className="font-ui flex h-12 w-12 items-center justify-center rounded-sm bg-[#b96b35] text-lg font-black text-white">
               Im
             </span>
             <span className="text-2xl font-black tracking-tight text-[#13233a]">
-              Imaginaria
+              Kinesysprototypes
             </span>
           </a>
 
@@ -259,7 +259,7 @@ export default function Home() {
             </a>
             <a
               href="#contact"
-              aria-label="Contact Imaginaria"
+              aria-label="Contact Kinesysprototypes"
               className="font-ui flex h-10 w-10 items-center justify-center rounded-full bg-[#13233a] text-lg font-black text-white"
             >
               ?
@@ -600,7 +600,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <h2 className="section-title text-5xl font-black tracking-tight">
-              Build With <span className="text-[#b96b35]">Imaginaria</span>
+              Build With <span className="text-[#b96b35]">Kinesysprototypes</span>
             </h2>
             <a
               href="#contact"
@@ -655,7 +655,7 @@ export default function Home() {
               <span className="text-[#1f5edb]">Join</span> the Design Revolution
             </h2>
             <p className="font-ui mt-5 text-sm font-semibold leading-6 text-[#6b6b6b]">
-              Imagine a career where creativity meets collaboration. Imaginaria
+              Imagine a career where creativity meets collaboration. Kinesysprototypes
               has openings for design rockstars. Join us and shape the future of
               design.
             </p>
@@ -717,7 +717,7 @@ export default function Home() {
 
       <footer className="bg-[#0c1727] px-5 py-8 text-sm font-bold text-[#aeb7c8] sm:px-8 lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 md:flex-row md:items-center">
-          <p>© 2026 Imaginaria. Product design, prototyping, and manufacturing support.</p>
+          <p>© 2026 Kinesysprototypes. Product design, prototyping, and manufacturing support.</p>
           <div className="flex gap-5">
             <a href="#services" className="hover:text-white">
               Services
