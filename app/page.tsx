@@ -203,8 +203,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#fbf3e5] text-[#161c2d]">
       <SiteHeader />
 
-      <section className="relative left-1/2 w-screen -translate-x-1/2 bg-[#f3eadc]">
-        <div className="relative min-h-[620px] w-screen overflow-hidden bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px]">
+      <section className="bg-[#f3eadc] px-5 py-8 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
+        <div className="relative mx-auto min-h-[620px] max-w-7xl overflow-hidden rounded-[2rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px]">
           {heroSlides.map((slide, index) => (
             <div
               key={slide.title}
