@@ -40,18 +40,64 @@ const stages = [
   },
 ];
 
-const infinityPath =
-  "M205 335 C125 335 70 290 70 195 C70 100 125 55 205 55 C295 55 345 140 410 195 C475 250 525 335 615 335 C695 335 750 290 750 195 C750 100 695 55 615 55 C525 55 475 140 410 195 C345 250 295 335 205 335";
+type Point = [number, number];
+type Cubic = [Point, Point, Point, Point];
 
-const stagePaths = [
-  "M316.875 285.625 C285 313.75 250 335 205 335 C157 335 118 318.8 94.48 285.32",
-  "M107.5 300.625 C83.75 277.5 70 242.5 70 195 C70 147.5 83.75 112.5 107.5 89.375",
-  "M107.5 89.375 C131.25 66.25 165 55 205 55 C250 55 285 76.25 316.875 104.375",
-  "M316.875 104.375 C348.75 132.5 377.5 167.5 410 195 C442.5 222.5 471.25 257.5 503.125 285.625",
-  "M503.125 285.625 C535 313.75 570 335 615 335 C655 335 688.75 323.75 712.5 300.625",
-  "M712.5 300.625 C736.25 277.5 750 242.5 750 195 C750 147.5 736.25 112.5 712.5 89.375",
-  "M712.5 89.375 C688.75 66.25 655 55 615 55 C570 55 535 76.25 503.125 104.375",
+const curves: Cubic[] = [
+  [[205, 335], [120, 335], [55, 300], [55, 195]],
+  [[55, 195], [55, 90], [120, 55], [205, 55]],
+  [[205, 55], [300, 55], [350, 115], [410, 195]],
+  [[410, 195], [470, 275], [520, 335], [615, 335]],
+  [[615, 335], [700, 335], [765, 300], [765, 195]],
+  [[765, 195], [765, 90], [700, 55], [615, 55]],
+  [[615, 55], [520, 55], [470, 115], [410, 195]],
+  [[410, 195], [350, 275], [300, 335], [205, 335]],
 ];
+
+const point = ([x, y]: Point) => `${x} ${y}`;
+const midpoint = ([ax, ay]: Point, [bx, by]: Point): Point => [
+  (ax + bx) / 2,
+  (ay + by) / 2,
+];
+
+const splitCubic = ([p0, p1, p2, p3]: Cubic): [Cubic, Cubic] => {
+  const a = midpoint(p0, p1);
+  const b = midpoint(p1, p2);
+  const c = midpoint(p2, p3);
+  const d = midpoint(a, b);
+  const e = midpoint(b, c);
+  const f = midpoint(d, e);
+
+  return [
+    [p0, a, d, f],
+    [f, e, c, p3],
+  ];
+};
+
+const infinityPath = `${curves
+  .map((curve, index) =>
+    index === 0
+      ? `M${point(curve[0])} C${point(curve[1])} ${point(curve[2])} ${point(curve[3])}`
+      : `C${point(curve[1])} ${point(curve[2])} ${point(curve[3])}`,
+  )
+  .join(" ")} Z`;
+
+const stageCurvePairs: Array<[number, number]> = [
+  [7, 0],
+  [0, 1],
+  [1, 2],
+  [2, 3],
+  [3, 4],
+  [4, 5],
+  [5, 6],
+];
+
+const stagePaths = stageCurvePairs.map(([incomingIndex, outgoingIndex]) => {
+  const incoming = splitCubic(curves[incomingIndex])[1];
+  const outgoing = splitCubic(curves[outgoingIndex])[0];
+
+  return `M${point(incoming[0])} C${point(incoming[1])} ${point(incoming[2])} ${point(incoming[3])} C${point(outgoing[1])} ${point(outgoing[2])} ${point(outgoing[3])}`;
+});
 
 export default function ImagineProcess() {
   const graphicRef = useRef<HTMLDivElement>(null);
@@ -158,11 +204,11 @@ export default function ImagineProcess() {
                 className="text-[14px] font-black"
               >
                 <text x="205" y="335">1</text>
-                <text x="70" y="195">2</text>
+                <text x="55" y="195">2</text>
                 <text x="205" y="55">3</text>
                 <text x="410" y="195">4</text>
                 <text x="615" y="335">5</text>
-                <text x="750" y="195">6</text>
+                <text x="765" y="195">6</text>
                 <text x="615" y="55">7</text>
               </g>
             </svg>
