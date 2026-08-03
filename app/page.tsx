@@ -217,7 +217,7 @@ export default function Home() {
                 fill
                 priority={index === 0}
                 sizes="(min-width: 1280px) 1280px, 100vw"
-                className="object-cover object-top"
+                className="object-contain object-center"
               />
             </div>
           ))}
