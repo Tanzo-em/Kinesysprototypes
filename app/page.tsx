@@ -22,16 +22,19 @@ const heroSlides = [
 const services = [
   {
     title: "Product Design",
+    href: "/services/product-design",
     image: "/figma/car-sketch.jpg",
     copy: "We craft intuitive and visually appealing designs that enhance user engagement and align with your brand identity.",
   },
   {
     title: "Benchmarking",
+    href: "/services/benchmarking",
     image: "/figma/blue-illustration.jpg",
     copy: "We analyze your product against competitors and industry standards to identify strengths, weaknesses, and opportunities for improvement.",
   },
   {
     title: "Visualization",
+    href: "/services/visualization",
     image: "/figma/design-desk.jpg",
     copy: "We create high-quality 3D models, product demo videos, and interactive prototypes to effectively showcase your product's design, features, and functionality.",
   },
@@ -491,7 +494,7 @@ export default function Home() {
             {services.map((service) => (
               <a
                 key={service.title}
-                href="#contact"
+                href={service.href}
                 className="service-card group overflow-hidden rounded-sm bg-white shadow-[0_10px_34px_rgba(22,28,45,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(185,107,53,0.14)]"
               >
                 <div className="relative aspect-[1.35] bg-[#e4ded4]">
