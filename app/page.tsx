@@ -61,26 +61,6 @@ const industries = [
   "Toys",
 ];
 
-const imagineIndustries = [
-  {
-    title: "Automotive",
-    copy: "Driving innovation on the road with automotive clients to design intuitive applications, streamlined in-car experiences, and connected journeys.",
-  },
-  {
-    title: "Health Care",
-    copy: "Partnering with healthcare providers to create user-centric applications that improve patient experiences, streamline workflows, and empower better care.",
-    active: true,
-  },
-  {
-    title: "Toy Industry",
-    copy: "Helping toy companies create engaging applications that bring ideas to life, spark imagination, and fuel a world of interactive play.",
-  },
-  {
-    title: "Entertainment",
-    copy: "Working with entertainment clients to design engaging applications that connect audiences with content and fuel immersive experiences.",
-  },
-];
-
 const stats = [
   ["30+", "3D printers & machines"],
   ["500+", "Customers"],
@@ -263,33 +243,6 @@ export default function Home() {
       <section id="imagine" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <ImagineProcess />
-
-          <h3 className="font-ui mt-16 text-center text-3xl font-black tracking-wide text-[#303030]">
-            Designing for Diverse <span className="text-[#1f5edb]">Industries</span>
-          </h3>
-          <div className="mt-10 grid gap-6 md:grid-cols-4">
-            {imagineIndustries.map((industry) => (
-              <article
-                key={industry.title}
-                className={`p-4 ${
-                  industry.active ? "bg-[#f2f2f2]" : "bg-white"
-                }`}
-              >
-                <h4
-                  className={`font-ui border-b pb-1 text-base font-black ${
-                    industry.active
-                      ? "border-[#1f5edb] text-[#1f5edb]"
-                      : "border-[#303030] text-[#303030]"
-                  }`}
-                >
-                  {industry.title}
-                </h4>
-                <p className="font-ui mt-3 text-xs font-semibold leading-5 text-[#666]">
-                  {industry.copy}
-                </p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
