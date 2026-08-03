@@ -389,46 +389,47 @@ export default function Home() {
                 role="img"
                 aria-label="IMAGINE process infinity diagram"
               >
+                <title>Seven-stage IMAGINE design process</title>
+                <desc>
+                  A continuous infinity loop showing the seven stages of the
+                  IMAGINE design process, with Investigate highlighted as stage one.
+                </desc>
                 <path
-                  d="M106 196c88-166 244-165 316 0 73 169 229 165 305 0"
+                  d="M70 195 C70 100 125 55 205 55 C295 55 345 140 410 195 C475 250 525 335 615 335 C695 335 750 290 750 195 C750 100 695 55 615 55 C525 55 475 140 410 195 C345 250 295 335 205 335 C125 335 70 290 70 195"
                   fill="none"
                   stroke="#88a9ed"
                   strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth="34"
                 />
                 <path
-                  d="M106 196c88 166 244 165 316 0"
-                  fill="none"
-                  stroke="#88a9ed"
-                  strokeLinecap="round"
-                  strokeWidth="34"
-                />
-                <path
-                  d="M106 196c56 106 138 143 213 97"
+                  d="M112 308 C140 326 171 335 205 335 C255 335 295 308 329 268"
                   fill="none"
                   stroke="#1f5edb"
-                  strokeLinecap="butt"
+                  strokeLinecap="round"
                   strokeWidth="34"
                 />
-                <text x="276" y="37" fill="#fff" className="font-ui text-[14px] font-black">3</text>
-                <text x="104" y="202" fill="#fff" className="font-ui text-[14px] font-black">2</text>
-                <text x="276" y="347" fill="#fff" className="font-ui text-[14px] font-black">1</text>
-                <text x="433" y="202" fill="#fff" className="font-ui text-[14px] font-black">4</text>
-                <text x="598" y="347" fill="#fff" className="font-ui text-[14px] font-black">5</text>
-                <text x="731" y="202" fill="#fff" className="font-ui text-[14px] font-black">6</text>
-                <text x="598" y="37" fill="#fff" className="font-ui text-[14px] font-black">7</text>
+                <g fill="#fff" textAnchor="middle" dominantBaseline="middle" className="font-ui text-[14px] font-black">
+                  <text x="205" y="335">1</text>
+                  <text x="70" y="195">2</text>
+                  <text x="205" y="55">3</text>
+                  <text x="410" y="195">4</text>
+                  <text x="615" y="335">5</text>
+                  <text x="750" y="195">6</text>
+                  <text x="615" y="55">7</text>
+                </g>
               </svg>
 
-              <div className="absolute left-[24%] top-[41%]">
-                <p className="font-ui text-base font-black text-[#2f2f2f]">
-                  Stage -01
+              <div className="absolute left-1/4 top-1/2 w-[29%] -translate-x-1/2 -translate-y-1/2 text-center">
+                <p className="font-ui text-xs font-black text-[#2f2f2f] sm:text-base">
+                  Stage - 01
                 </p>
-                <p className="font-ui mt-2 text-3xl font-black text-[#1f5edb]">
+                <p className="font-ui mt-1 text-lg font-black text-[#1f5edb] sm:mt-2 sm:text-3xl">
                   Investigate
                 </p>
               </div>
 
-              <p className="font-ui absolute left-[58%] top-[39%] max-w-[230px] text-xs font-semibold leading-5 text-[#444]">
+              <p className="font-ui absolute left-3/4 top-1/2 w-[28%] -translate-x-1/2 -translate-y-1/2 text-[8px] font-semibold leading-[1.45] text-[#444] sm:text-xs sm:leading-5">
                 The first stage of the IMAGINE Design Process is all about
                 understanding the problem that needs to be solved and the target
                 users. This is done through a variety of research methods.
