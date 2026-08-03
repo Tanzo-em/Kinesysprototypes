@@ -2,9 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Imaginaria | Product Development Partner",
+  title: "Kinesysprototypes | Product Development Partner",
   description:
     "Product design, 3D printing, prototyping, manufacturing, and material support in Pune.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -202,9 +202,14 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-[#e8e1d8] bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8 lg:px-10">
           <a href="#" className="flex items-center gap-3" aria-label="Kinesysprototypes home">
-            <span className="font-ui flex h-12 w-12 items-center justify-center rounded-sm bg-[#b96b35] text-lg font-black text-white">
-              Im
-            </span>
+            <Image
+              src="/kinesysprototypes-logo.png"
+              alt="Kinesysprototypes logo"
+              width={72}
+              height={48}
+              priority
+              className="h-12 w-[72px] rounded-sm object-cover"
+            />
             <span className="text-2xl font-black tracking-tight text-[#13233a]">
               Kinesysprototypes
             </span>
