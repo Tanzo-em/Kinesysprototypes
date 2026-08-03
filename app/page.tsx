@@ -508,36 +508,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="join" className="bg-white py-16 sm:py-24">
-        <div className="relative mx-auto min-h-[360px] max-w-7xl overflow-hidden bg-[#d8dde3]">
-          <div className="absolute inset-y-0 right-0 hidden w-[78%] md:block">
-            <Image
-              src="/figma/join-design-revolution.png"
-              alt="Designer sitting with tablet on a couch"
-              fill
-              sizes="(min-width: 768px) 78vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="relative z-10 flex min-h-[360px] max-w-sm flex-col justify-center px-8 py-12 sm:px-12">
-            <h2 className="font-ui text-3xl font-black tracking-wide text-[#303030]">
-              <span className="text-[#1f5edb]">Join</span> the Design Revolution
-            </h2>
-            <p className="font-ui mt-5 text-sm font-semibold leading-6 text-[#6b6b6b]">
-              Imagine a career where creativity meets collaboration. Kinesysprototypes
-              has openings for design rockstars. Join us and shape the future of
-              design.
-            </p>
-            <a
-              href="#contact"
-              className="font-ui mt-5 w-max rounded-sm bg-[#1f5edb] px-5 py-3 text-sm font-black text-white transition hover:bg-[#174bb0]"
-            >
-              Join Now
-            </a>
-          </div>
-        </div>
-      </section>
-
       <section id="contact" className="bg-[#13233a] py-16 text-white sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:items-center">
           <div>

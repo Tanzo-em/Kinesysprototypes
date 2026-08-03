@@ -13,7 +13,6 @@ const navigationLinks = [
   { title: "Industries", href: "/#industries" },
   { title: "Materials", href: "/#materials" },
   { title: "Packages", href: "/#showcase" },
-  { title: "Join Now", href: "/#join" },
   { title: "Contact", href: "/#contact" },
 ];
 
