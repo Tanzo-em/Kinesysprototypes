@@ -54,41 +54,61 @@ const stagePaths = [
 ];
 
 export default function ImagineProcess() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const graphicRef = useRef<HTMLDivElement>(null);
+  const activeIndexRef = useRef(0);
+  const wheelLockedRef = useRef(false);
+  const wheelTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const updateStage = () => {
-      const section = sectionRef.current;
+    const graphic = graphicRef.current;
 
-      if (!section) return;
+    if (!graphic) return;
 
-      const rect = section.getBoundingClientRect();
-      const scrollDistance = Math.max(section.offsetHeight - window.innerHeight, 1);
-      const progress = Math.min(1, Math.max(0, -rect.top / scrollDistance));
-      const nextIndex = Math.min(stages.length - 1, Math.floor(progress * stages.length));
+    const handleWheel = (event: WheelEvent) => {
+      if (Math.abs(event.deltaY) < 4) return;
 
+      const direction = event.deltaY > 0 ? 1 : -1;
+      const currentIndex = activeIndexRef.current;
+      const nextIndex = Math.min(
+        stages.length - 1,
+        Math.max(0, currentIndex + direction),
+      );
+
+      if (wheelLockedRef.current) {
+        event.preventDefault();
+        return;
+      }
+
+      if (nextIndex === currentIndex) return;
+
+      event.preventDefault();
+      wheelLockedRef.current = true;
+      activeIndexRef.current = nextIndex;
       setActiveIndex(nextIndex);
+
+      wheelTimerRef.current = setTimeout(() => {
+        wheelLockedRef.current = false;
+      }, 450);
     };
 
-    updateStage();
-    window.addEventListener("scroll", updateStage, { passive: true });
-    window.addEventListener("resize", updateStage);
+    graphic.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      window.removeEventListener("scroll", updateStage);
-      window.removeEventListener("resize", updateStage);
+      graphic.removeEventListener("wheel", handleWheel);
+
+      if (wheelTimerRef.current) clearTimeout(wheelTimerRef.current);
     };
   }, []);
 
   const activeStage = stages[activeIndex];
 
   return (
-    <div ref={sectionRef} className="relative h-[560vh]">
-      <div className="sticky top-24 flex min-h-[calc(100vh-6rem)] flex-col justify-center py-8">
+    <div className="relative py-8">
+      <div className="flex flex-col justify-center">
         <div className="text-center">
           <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
-            Scroll to explore
+            Hover over the infinity and scroll to explore
           </p>
           <h2 className="mt-3 text-3xl font-black tracking-wide text-[#081d46] sm:text-4xl">
             Our Patented <span className="text-[#075ee8]">IMAGINE</span> Process
@@ -96,7 +116,12 @@ export default function ImagineProcess() {
         </div>
 
         <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1.45fr_0.55fr]">
-          <div className="relative mx-auto aspect-[2.1] w-full max-w-[820px]">
+          <div
+            ref={graphicRef}
+            tabIndex={0}
+            aria-label="Scroll over the infinity diagram to move through stages 1 to 7"
+            className="relative mx-auto aspect-[2.1] w-full max-w-[820px] cursor-ns-resize outline-none focus-visible:ring-4 focus-visible:ring-[#b8cff8]"
+          >
             <svg
               viewBox="0 0 820 390"
               className="h-full w-full"
