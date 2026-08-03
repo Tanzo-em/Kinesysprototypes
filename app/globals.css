@@ -49,6 +49,19 @@ textarea {
   font: inherit;
 }
 
+.service-card {
+  position: relative;
+}
+
+.service-card::before {
+  background: #b96b35;
+  content: "";
+  height: 4px;
+  inset: 0 0 auto;
+  position: absolute;
+  z-index: 10;
+}
+
 @keyframes hero-slide {
   0% {
     opacity: 0;

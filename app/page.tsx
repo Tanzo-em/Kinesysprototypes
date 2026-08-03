@@ -22,14 +22,17 @@ const heroSlides = [
 const services = [
   {
     title: "Product Design",
+    image: "/figma/car-sketch.jpg",
     copy: "We craft intuitive and visually appealing designs that enhance user engagement and align with your brand identity.",
   },
   {
     title: "Benchmarking",
+    image: "/figma/blue-illustration.jpg",
     copy: "We analyze your product against competitors and industry standards to identify strengths, weaknesses, and opportunities for improvement.",
   },
   {
     title: "Visualization",
+    image: "/figma/design-desk.jpg",
     copy: "We create high-quality 3D models, product demo videos, and interactive prototypes to effectively showcase your product's design, features, and functionality.",
   },
 ];
@@ -479,35 +482,40 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="bg-white py-16 sm:py-24">
+      <section id="services" className="bg-[#fbf3e5] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <h2 className="section-title text-4xl font-black tracking-tight text-[#4f5661] sm:text-5xl">
-            Our Services
+          <h2 className="section-title text-center text-5xl font-black tracking-tight">
+            What <span className="text-[#b96b35]">We Do</span>
           </h2>
-          <div className="mt-2 h-1 w-24 bg-[#f28a18]" />
-
-          <div className="relative mx-auto mt-12 grid max-w-5xl gap-8 md:min-h-[430px] md:grid-cols-2">
-            <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border-[24px] border-[#fde8e8] md:block" />
-
-            {services.map((service, index) => (
-              <article
+          <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
+            {services.map((service) => (
+              <a
                 key={service.title}
-                className={`relative z-10 max-w-sm ${
-                  index === 0
-                    ? "md:self-start md:pt-14"
-                    : index === 1
-                      ? "md:justify-self-end md:self-start md:pt-14"
-                      : "md:col-span-2 md:mx-auto md:w-full md:self-end md:pb-4"
-                }`}
+                href="#contact"
+                className="service-card group overflow-hidden rounded-sm bg-white shadow-[0_10px_34px_rgba(22,28,45,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(185,107,53,0.14)]"
               >
-                <h3 className="text-2xl font-semibold text-[#303744]">
-                  {service.title}
-                </h3>
-                <div className="mt-1 h-0.5 w-36 bg-[#f28a18]" />
-                <p className="mt-2 text-base font-medium leading-6 text-[#6a7180]">
-                  {service.copy}
-                </p>
-              </article>
+                <div className="relative aspect-[1.35] bg-[#e4ded4]">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,20,34,0.02),rgba(14,20,34,0.36))]" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-black text-[#13233a] transition group-hover:text-[#8a4f2a]">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 text-sm font-semibold leading-6 text-[#606a7a]">
+                    {service.copy}
+                  </p>
+                  <span className="mt-5 inline-flex text-sm font-black text-[#8a4f2a]">
+                    Know more -&gt;
+                  </span>
+                </div>
+              </a>
             ))}
           </div>
         </div>
