@@ -20,12 +20,12 @@ export default function ServiceDetail({
   deliverables,
 }: ServiceDetailProps) {
   return (
-    <main className="min-h-screen bg-[#fbf3e5] text-[#13233a]">
+    <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
       <SiteHeader />
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-24">
         <div className="flex flex-col justify-center">
-          <p className="text-sm font-black uppercase tracking-[0.2em] text-[#b96b35]">
+          <p className="text-sm font-black uppercase tracking-[0.2em] text-[#075ee8]">
             {eyebrow}
           </p>
           <h1 className="mt-4 text-5xl font-black tracking-[-0.04em] sm:text-6xl">
@@ -36,7 +36,7 @@ export default function ServiceDetail({
           </p>
           <Link
             href="/#contact"
-            className="mt-8 inline-flex w-max rounded-sm bg-[#b96b35] px-8 py-4 text-sm font-black text-white transition hover:bg-[#8a4f2a]"
+            className="mt-8 inline-flex w-max rounded-lg bg-[#075ee8] px-8 py-4 text-sm font-black text-white transition hover:bg-[#064dbd]"
           >
             Discuss your project
           </Link>
@@ -61,7 +61,7 @@ export default function ServiceDetail({
             {deliverables.map((deliverable) => (
               <div
                 key={deliverable}
-                className="border border-[#e7d3bd] bg-[#fbf3e5] p-6 text-base font-bold text-[#303744]"
+                className="rounded-lg border border-[#cbdcfb] bg-[#eef4ff] p-6 text-base font-bold text-[#243858]"
               >
                 {deliverable}
               </div>

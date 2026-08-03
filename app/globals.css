@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fbf3e5;
-  --foreground: #13233a;
+  --background: #f5f8ff;
+  --foreground: #081d46;
   --font-site: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -54,7 +54,7 @@ textarea {
 }
 
 .service-card::before {
-  background: #b96b35;
+  background: #075ee8;
   content: "";
   height: 4px;
   inset: 0 0 auto;

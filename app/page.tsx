@@ -200,10 +200,10 @@ const showcase = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#fbf3e5] text-[#161c2d]">
+    <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
       <SiteHeader />
 
-      <section className="bg-[#f3eadc] px-5 pb-8 pt-4 sm:px-8 sm:pb-12 sm:pt-6 lg:px-10 lg:pb-16 lg:pt-8">
+      <section className="bg-[linear-gradient(180deg,#edf3ff_0%,#ffffff_100%)] px-5 pb-8 pt-4 sm:px-8 sm:pb-12 sm:pt-6 lg:px-10 lg:pb-16 lg:pt-8">
         <div className="relative mx-auto min-h-[620px] max-w-7xl overflow-hidden rounded-[2rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px]">
           {heroSlides.map((slide, index) => (
             <div
@@ -226,7 +226,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,12,18,0.45),transparent_45%)]" />
 
           <div className="relative z-10 flex min-h-[620px] max-w-2xl flex-col justify-center px-7 py-16 sm:min-h-[680px] sm:px-12 lg:px-16">
-            <p className="mb-5 text-sm font-black uppercase tracking-[0.2em] text-[#f0a36f]">
+            <p className="mb-5 text-sm font-black uppercase tracking-[0.2em] text-[#78a9ff]">
               Home
             </p>
             <h1 className="section-title max-w-xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
@@ -239,7 +239,7 @@ export default function Home() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#contact"
-                className="rounded-sm bg-[#b96b35] px-9 py-4 text-center text-base font-black text-white shadow-[0_16px_36px_rgba(185,107,53,0.3)] transition hover:bg-[#8a4f2a]"
+                className="rounded-lg bg-[#075ee8] px-9 py-4 text-center text-base font-black text-white shadow-[0_16px_36px_rgba(7,94,232,0.3)] transition hover:bg-[#064dbd]"
               >
                 Get Quote
               </a>
@@ -268,7 +268,7 @@ export default function Home() {
 
           <div className="flex flex-col justify-center">
             <h2 className="section-title text-5xl font-black tracking-tight text-[#13233a]">
-              Our <span className="text-[#b96b35]">Expertise</span>
+              Our <span className="text-[#075ee8]">Expertise</span>
             </h2>
             <p className="mt-7 text-base font-semibold leading-8 text-[#5f6675]">
               We support product teams from concept to creation with design,
@@ -278,7 +278,7 @@ export default function Home() {
             </p>
             <a
               href="#services"
-              className="font-ui mt-9 inline-flex w-full max-w-xs items-center justify-center rounded-sm bg-[#13233a] px-8 py-4 text-sm font-black text-white transition hover:bg-[#b96b35]"
+              className="font-ui mt-9 inline-flex w-full max-w-xs items-center justify-center rounded-lg bg-[#081d46] px-8 py-4 text-sm font-black text-white transition hover:bg-[#075ee8]"
             >
               Know more
             </a>
@@ -286,7 +286,7 @@ export default function Home() {
             <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-9">
               {stats.map(([value, label]) => (
                 <div key={label}>
-                  <p className="font-ui text-6xl font-black text-[#b96b35]">{value}</p>
+                  <p className="font-ui text-6xl font-black text-[#075ee8]">{value}</p>
                   <p className="font-ui mt-2 text-sm font-black uppercase tracking-[0.16em] text-[#13233a]">
                     {label}
                   </p>
@@ -406,17 +406,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="bg-[#fbf3e5] py-16 sm:py-24">
+      <section id="services" className="bg-[#edf3ff] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-5xl font-black tracking-tight">
-            What <span className="text-[#b96b35]">We Do</span>
+            What <span className="text-[#075ee8]">We Do</span>
           </h2>
           <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
             {services.map((service) => (
               <a
                 key={service.title}
                 href={service.href}
-                className="service-card group overflow-hidden rounded-sm bg-white shadow-[0_10px_34px_rgba(22,28,45,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(185,107,53,0.14)]"
+                className="service-card group overflow-hidden rounded-xl bg-white shadow-[0_10px_34px_rgba(7,54,130,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(7,94,232,0.16)]"
               >
                 <div className="relative aspect-[1.35] bg-[#e4ded4]">
                   <Image
@@ -429,13 +429,13 @@ export default function Home() {
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,20,34,0.02),rgba(14,20,34,0.36))]" />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-black text-[#13233a] transition group-hover:text-[#8a4f2a]">
+                  <h3 className="text-2xl font-black text-[#081d46] transition group-hover:text-[#075ee8]">
                     {service.title}
                   </h3>
                   <p className="mt-3 text-sm font-semibold leading-6 text-[#606a7a]">
                     {service.copy}
                   </p>
-                  <span className="mt-5 inline-flex text-sm font-black text-[#8a4f2a]">
+                  <span className="mt-5 inline-flex text-sm font-black text-[#075ee8]">
                     Know more -&gt;
                   </span>
                 </div>
@@ -448,13 +448,13 @@ export default function Home() {
       <section id="industries" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-5xl font-black tracking-tight">
-            Industries <span className="text-[#b96b35]">& Applications</span>
+            Industries <span className="text-[#075ee8]">& Applications</span>
           </h2>
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map((industry) => (
               <div
                 key={industry}
-                className="font-ui rounded-sm border border-[#e7d3bd] bg-[#fbf3e5] px-5 py-6 text-center text-lg font-black text-[#13233a] transition hover:border-[#b96b35] hover:text-[#8a4f2a]"
+                className="font-ui rounded-lg border border-[#cbdcfb] bg-[#f5f8ff] px-5 py-6 text-center text-lg font-black text-[#081d46] transition hover:border-[#075ee8] hover:text-[#075ee8]"
               >
                 {industry}
               </div>
@@ -463,7 +463,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#fbf3e5] py-16 sm:py-24">
+      <section className="bg-[#edf3ff] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-5xl font-black tracking-tight">
             USPs
@@ -472,9 +472,9 @@ export default function Home() {
             {strengths.map((item) => (
               <article
                 key={item.title}
-                className="rounded-sm bg-white p-6 shadow-[0_12px_34px_rgba(22,28,45,0.07)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(185,107,53,0.12)]"
+                className="rounded-xl bg-white p-6 shadow-[0_12px_34px_rgba(7,54,130,0.07)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(7,94,232,0.14)]"
               >
-                <div className="mb-6 h-20 rounded-sm bg-[#f5dfc8]" />
+                <div className="mb-6 h-20 rounded-lg bg-[#dce8ff]" />
                 <h3 className="text-xl font-black text-[#13233a]">
                   {item.title}
                 </h3>
@@ -490,13 +490,13 @@ export default function Home() {
       <section className="bg-white py-14">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-4xl font-black tracking-tight">
-            Trusted <span className="text-[#b96b35]">By</span>
+            Trusted <span className="text-[#075ee8]">By</span>
           </h2>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {["Wave", "Litemed", "Calidat", "Northstar", "Brightlab"].map((name) => (
               <div
                 key={name}
-                className="font-ui flex h-24 items-center justify-center rounded-sm border border-[#e7d3bd] bg-[#fbf3e5] text-xl font-black text-[#657083] transition hover:border-[#b96b35] hover:text-[#8a4f2a]"
+                className="font-ui flex h-24 items-center justify-center rounded-lg border border-[#cbdcfb] bg-[#f5f8ff] text-xl font-black text-[#657083] transition hover:border-[#075ee8] hover:text-[#075ee8]"
               >
                 {name}
               </div>
@@ -505,11 +505,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="materials" className="bg-[#fbf3e5] py-16 sm:py-24">
+      <section id="materials" className="bg-[#edf3ff] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="section-title text-5xl font-black tracking-tight">
-              Materials <span className="text-[#b96b35]">We Offer</span>
+              Materials <span className="text-[#075ee8]">We Offer</span>
             </h2>
             <p className="font-ui mt-5 text-base font-semibold leading-7 text-[#5f6675]">
               Process-specific material options for prototyping, machining,
@@ -521,7 +521,7 @@ export default function Home() {
             {materials.map((group) => (
               <article
                 key={group.process}
-                className="rounded-sm border border-[#e7d3bd] bg-white p-6 shadow-[0_10px_30px_rgba(22,28,45,0.06)]"
+                className="rounded-lg border border-[#cbdcfb] bg-white p-6 shadow-[0_10px_30px_rgba(7,54,130,0.06)]"
               >
                 <h3 className="text-2xl font-black text-[#13233a]">
                   {group.process}
@@ -530,7 +530,7 @@ export default function Home() {
                   {group.items.map((item) => (
                     <span
                       key={item}
-                      className="font-ui rounded-full border border-[#ebc9a8] bg-[#fff6ea] px-3 py-2 text-xs font-black text-[#8a4f2a]"
+                      className="font-ui rounded-full border border-[#b8cff8] bg-[#eef4ff] px-3 py-2 text-xs font-black text-[#075ee8]"
                     >
                       {item}
                     </span>
@@ -546,11 +546,11 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <h2 className="section-title text-5xl font-black tracking-tight">
-              Build With <span className="text-[#b96b35]">Kinesysprototypes</span>
+              Build With <span className="text-[#075ee8]">Kinesysprototypes</span>
             </h2>
             <a
               href="#contact"
-              className="font-ui w-max rounded-sm bg-[#13233a] px-7 py-4 text-sm font-black text-white transition hover:bg-[#b96b35]"
+              className="font-ui w-max rounded-lg bg-[#081d46] px-7 py-4 text-sm font-black text-white transition hover:bg-[#075ee8]"
             >
               Request package
             </a>
@@ -560,7 +560,7 @@ export default function Home() {
             {showcase.map((item) => (
               <article
                 key={item.title}
-                className="group overflow-hidden rounded-sm border border-[#e7d3bd] bg-white shadow-[0_12px_34px_rgba(22,28,45,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(185,107,53,0.12)]"
+                className="group overflow-hidden rounded-lg border border-[#cbdcfb] bg-white shadow-[0_12px_34px_rgba(7,54,130,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(7,94,232,0.14)]"
               >
                 <div className="relative aspect-[1.1] bg-[#e9e4dc]">
                   <Image
@@ -618,7 +618,7 @@ export default function Home() {
       <section id="contact" className="bg-[#13233a] py-16 text-white sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:items-center">
           <div>
-            <p className="font-ui text-sm font-black uppercase tracking-[0.22em] text-[#b96b35]">
+            <p className="font-ui text-sm font-black uppercase tracking-[0.22em] text-[#78a9ff]">
               Get a quote
             </p>
             <h2 className="section-title mt-4 text-5xl font-black leading-tight">
@@ -629,31 +629,31 @@ export default function Home() {
             <input
               aria-label="Name"
               placeholder="Name"
-              className="rounded-sm border border-[#ddd7cd] px-4 py-4 text-sm font-bold outline-none focus:border-[#8a4f2a]"
+              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
             />
             <input
               aria-label="Email"
               placeholder="Email"
-              className="rounded-sm border border-[#ddd7cd] px-4 py-4 text-sm font-bold outline-none focus:border-[#8a4f2a]"
+              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
             />
             <input
               aria-label="Phone"
               placeholder="Phone"
-              className="rounded-sm border border-[#ddd7cd] px-4 py-4 text-sm font-bold outline-none focus:border-[#8a4f2a]"
+              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
             />
             <input
               aria-label="Project type"
               placeholder="Project type"
-              className="rounded-sm border border-[#ddd7cd] px-4 py-4 text-sm font-bold outline-none focus:border-[#8a4f2a]"
+              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
             />
             <textarea
               aria-label="Message"
               placeholder="Tell us what you want to build"
-              className="min-h-32 rounded-sm border border-[#ddd7cd] px-4 py-4 text-sm font-bold outline-none focus:border-[#8a4f2a] sm:col-span-2"
+              className="min-h-32 rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8] sm:col-span-2"
             />
             <button
               type="button"
-              className="font-ui rounded-sm bg-[#b96b35] px-7 py-4 text-sm font-black text-white transition hover:bg-[#8a4f2a] sm:col-span-2"
+              className="font-ui rounded-lg bg-[#075ee8] px-7 py-4 text-sm font-black text-white transition hover:bg-[#064dbd] sm:col-span-2"
             >
               Send enquiry
             </button>
