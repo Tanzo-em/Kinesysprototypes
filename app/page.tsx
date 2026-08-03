@@ -112,6 +112,44 @@ const imagineIndustries = [
   },
 ];
 
+const imagineStages = [
+  {
+    number: 1,
+    title: "Investigate",
+    copy: "Understand the problem and target users.",
+  },
+  {
+    number: 2,
+    title: "Map",
+    copy: "Define project goals and objectives.",
+  },
+  {
+    number: 3,
+    title: "Architect",
+    copy: "Generate ideas and create prototypes.",
+  },
+  {
+    number: 4,
+    title: "Generate",
+    copy: "Build the product or service.",
+  },
+  {
+    number: 5,
+    title: "Integrate",
+    copy: "Launch the product or service.",
+  },
+  {
+    number: 6,
+    title: "Nurture",
+    copy: "Monitor and improve the product or service.",
+  },
+  {
+    number: 7,
+    title: "Evolve",
+    copy: "Continuously adapt and improve the product or service.",
+  },
+];
+
 const stats = [
   ["30+", "3D printers & machines"],
   ["500+", "Customers"],
@@ -380,9 +418,27 @@ export default function Home() {
           <h2 className="font-ui text-center text-3xl font-black tracking-wide text-[#303030]">
             Our Patented <span className="text-[#1f5edb]">IMAGINE</span> Process
           </h2>
+          <p className="font-ui mx-auto mt-4 max-w-3xl text-center text-sm font-semibold leading-6 text-[#666]">
+            The IMAGINE Design Process is a human-centered approach that turns
+            user needs into products and services through continuous improvement.
+          </p>
 
-          <div className="mx-auto mt-10 max-w-4xl">
-            <div className="relative mx-auto aspect-[2.1] max-w-[820px]">
+          <div className="mt-12 grid items-center gap-10 lg:grid-cols-[0.7fr_1.6fr_0.7fr] lg:gap-6">
+            <div className="grid gap-7 sm:grid-cols-3 lg:grid-cols-1">
+              {imagineStages.slice(0, 3).map((stage) => (
+                <article key={stage.number} className="font-ui">
+                  <h3 className="text-xl font-black text-[#303030]">
+                    <span className="text-[#1f5edb]">{stage.number}.</span>{" "}
+                    {stage.title}
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold leading-5 text-[#666]">
+                    {stage.copy}
+                  </p>
+                </article>
+              ))}
+            </div>
+
+            <div className="relative mx-auto aspect-[2.1] w-full max-w-[820px]">
               <svg
                 viewBox="0 0 820 390"
                 className="h-full w-full"
@@ -420,21 +476,20 @@ export default function Home() {
                   <text x="615" y="55">7</text>
                 </g>
               </svg>
+            </div>
 
-              <div className="absolute left-1/4 top-1/2 w-[29%] -translate-x-1/2 -translate-y-1/2 text-center">
-                <p className="font-ui text-xs font-black text-[#2f2f2f] sm:text-base">
-                  Stage - 01
-                </p>
-                <p className="font-ui mt-1 text-lg font-black text-[#1f5edb] sm:mt-2 sm:text-3xl">
-                  Investigate
-                </p>
-              </div>
-
-              <p className="font-ui absolute left-3/4 top-1/2 w-[28%] -translate-x-1/2 -translate-y-1/2 text-[8px] font-semibold leading-[1.45] text-[#444] sm:text-xs sm:leading-5">
-                The first stage of the IMAGINE Design Process is all about
-                understanding the problem that needs to be solved and the target
-                users. This is done through a variety of research methods.
-              </p>
+            <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-1">
+              {imagineStages.slice(3).map((stage) => (
+                <article key={stage.number} className="font-ui">
+                  <h3 className="text-xl font-black text-[#303030]">
+                    <span className="text-[#1f5edb]">{stage.number}.</span>{" "}
+                    {stage.title}
+                  </h3>
+                  <p className="mt-1 text-sm font-semibold leading-5 text-[#666]">
+                    {stage.copy}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
 
