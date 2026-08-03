@@ -206,45 +206,74 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="expertise" className="bg-white py-16 sm:py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
-          <div className="relative min-h-[320px] overflow-hidden rounded-xl bg-[#e9e4dc] sm:min-h-[460px]">
-            <Image
-              src="/figma/design-desk.jpg"
-              alt="Design desk with creative materials"
-              fill
-              sizes="(min-width: 1024px) 52vw, 100vw"
-              className="object-cover"
-            />
+      <section id="expertise" className="bg-[linear-gradient(180deg,#ffffff_0%,#f3f7ff_100%)] py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
+                From insight to production
+              </p>
+              <h2 className="section-title mt-3 text-4xl font-black tracking-tight text-[#081d46] sm:text-5xl">
+                Our <span className="text-[#075ee8]">Expertise</span>
+              </h2>
+              <p className="mt-6 text-base font-medium leading-8 text-[#5f6675]">
+                We support product teams from concept to creation with design,
+                prototyping, 3D printing, manufacturing, and finishing workflows.
+                Our team helps choose the right process, material, and production
+                route for each application.
+              </p>
+
+              <div className="mt-7 flex flex-wrap gap-2">
+                {["Product strategy", "Rapid prototyping", "Production support"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-full border border-[#c5d8fa] bg-white px-4 py-2 text-xs font-black text-[#315f9e]"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="#services"
+                className="mt-8 inline-flex w-full items-center justify-center rounded-xl bg-[#081d46] px-8 py-4 text-sm font-black text-white shadow-[0_14px_30px_rgba(8,29,70,0.16)] transition hover:bg-[#075ee8] sm:w-max"
+              >
+                Explore our capabilities
+              </a>
+            </div>
+
+            <div className="relative min-h-[340px] overflow-hidden rounded-3xl border border-[#cbdcfb] bg-[#dce8ff] shadow-[0_24px_70px_rgba(7,54,130,0.16)] sm:min-h-[520px]">
+              <Image
+                src="/figma/expertise-studio.png"
+                alt="Industrial product design studio with CAD, prototypes, and engineering tools"
+                fill
+                sizes="(min-width: 1024px) 58vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(8,29,70,0.58)_100%)]" />
+              <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/25 bg-[#081d46]/80 p-5 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-auto sm:max-w-sm">
+                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#8ab4ff]">
+                  Integrated workflow
+                </p>
+                <p className="mt-2 text-lg font-black">
+                  Research, design, prototype, validate, and manufacture.
+                </p>
+              </div>
+            </div>
           </div>
 
-          <div className="flex flex-col justify-center">
-            <h2 className="section-title text-4xl font-black tracking-tight text-[#13233a] sm:text-5xl">
-              Our <span className="text-[#075ee8]">Expertise</span>
-            </h2>
-            <p className="mt-7 text-base font-semibold leading-8 text-[#5f6675]">
-              We support product teams from concept to creation with design,
-              prototyping, 3D printing, manufacturing, and finishing workflows.
-              Our team helps choose the right process, material, and production
-              route for each application.
-            </p>
-            <a
-              href="#services"
-              className="font-ui mt-9 inline-flex w-full max-w-xs items-center justify-center rounded-lg bg-[#081d46] px-8 py-4 text-sm font-black text-white transition hover:bg-[#075ee8]"
-            >
-              Know more
-            </a>
-
-            <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-9">
-              {stats.map(([value, label]) => (
-                <div key={label}>
-                  <p className="font-ui text-4xl font-black text-[#075ee8] sm:text-6xl">{value}</p>
-                  <p className="font-ui mt-2 text-sm font-black uppercase tracking-[0.16em] text-[#13233a]">
-                    {label}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:mt-12 sm:grid-cols-4 sm:gap-5">
+            {stats.map(([value, label]) => (
+              <div
+                key={label}
+                className="rounded-2xl border border-[#d6e3fa] bg-white p-5 shadow-[0_10px_28px_rgba(7,54,130,0.06)] sm:p-6"
+              >
+                <p className="text-3xl font-black text-[#075ee8] sm:text-4xl">{value}</p>
+                <p className="mt-2 text-[11px] font-black uppercase leading-5 tracking-[0.12em] text-[#526784] sm:text-xs">
+                  {label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
