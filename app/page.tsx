@@ -403,10 +403,11 @@ export default function Home() {
                   strokeWidth="34"
                 />
                 <path
-                  d="M112 308 C140 326 171 335 205 335 C255 335 295 308 329 268"
+                  d="M316.875 285.625 C285 313.75 250 335 205 335 C157 335 118 318.8 94.48 285.32"
                   fill="none"
                   stroke="#1f5edb"
-                  strokeLinecap="round"
+                  strokeLinecap="butt"
+                  strokeLinejoin="round"
                   strokeWidth="34"
                 />
                 <g fill="#fff" textAnchor="middle" dominantBaseline="middle" className="font-ui text-[14px] font-black">
