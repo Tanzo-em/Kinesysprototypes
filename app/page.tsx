@@ -68,6 +68,15 @@ const stats = [
   ["100k+", "Parts printed"],
 ];
 
+const trustedCompanies = [
+  { name: "Wave", logo: "/figma/wave-logo.png", monogram: "" },
+  { name: "Litemed", logo: "/figma/litemed-logo.png", monogram: "" },
+  { name: "Calidat", logo: "/figma/calidat-logo.png", monogram: "" },
+  { name: "VCM", logo: "/figma/vcm-logo.png", monogram: "" },
+  { name: "Northstar", logo: "", monogram: "N" },
+  { name: "Brightlab", logo: "", monogram: "B" },
+];
+
 const strengths = [
   {
     title: "Experienced Team",
@@ -327,18 +336,47 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-14">
+      <section className="overflow-hidden bg-white py-14">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-4xl font-black tracking-tight">
             Trusted <span className="text-[#075ee8]">By</span>
           </h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {["Wave", "Litemed", "Calidat", "Northstar", "Brightlab"].map((name) => (
+        </div>
+
+        <div className="relative mt-10 overflow-hidden border-y border-[#dce8ff] bg-[#f5f8ff] py-5 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+          <div className="trusted-marquee flex w-max">
+            {[0, 1].map((copy) => (
               <div
-                key={name}
-                className="font-ui flex h-24 items-center justify-center rounded-lg border border-[#cbdcfb] bg-[#f5f8ff] text-xl font-black text-[#657083] transition hover:border-[#075ee8] hover:text-[#075ee8]"
+                key={copy}
+                aria-hidden={copy === 1}
+                className="flex shrink-0 gap-5 pr-5"
               >
-                {name}
+                {trustedCompanies.map((company) => (
+                  <div
+                    key={`${copy}-${company.name}`}
+                    className="flex h-28 w-72 shrink-0 items-center justify-center gap-5 rounded-xl border border-[#cbdcfb] bg-white px-7 shadow-[0_8px_24px_rgba(7,54,130,0.07)]"
+                  >
+                    {company.logo ? (
+                      <Image
+                        src={company.logo}
+                        alt={`${company.name} logo`}
+                        width={120}
+                        height={60}
+                        className="h-14 w-28 object-contain"
+                      />
+                    ) : (
+                      <span
+                        aria-hidden="true"
+                        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#075ee8] text-2xl font-black text-white"
+                      >
+                        {company.monogram}
+                      </span>
+                    )}
+                    <span className="text-lg font-black text-[#243858]">
+                      {company.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             ))}
           </div>

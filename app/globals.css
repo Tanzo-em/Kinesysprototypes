@@ -62,6 +62,24 @@ textarea {
   z-index: 10;
 }
 
+.trusted-marquee {
+  animation: trusted-marquee 24s linear infinite;
+}
+
+.trusted-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes trusted-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
 @keyframes hero-slide {
   0% {
     opacity: 0;
@@ -88,5 +106,10 @@ textarea {
   .hero-slide {
     animation: none;
     opacity: 1;
+  }
+
+  .trusted-marquee {
+    animation: none;
+    transform: none;
   }
 }
