@@ -21,59 +21,16 @@ const heroSlides = [
 
 const services = [
   {
-    title: "Product Designing",
-    image: "/figma/car-sketch.jpg",
-    copy: "Concept sketches, CAD models, product refinement, and DFM guidance for parts that need to move from idea to production.",
+    title: "Product Design",
+    copy: "We craft intuitive and visually appealing designs that enhance user engagement and align with your brand identity.",
   },
   {
-    title: "3D Scanning & Reverse Engineering",
-    image: "/figma/blue-illustration.jpg",
-    copy: "Scan physical parts, rebuild geometry, inspect dimensions, and create workable models for repair or redesign.",
+    title: "Benchmarking",
+    copy: "We analyze your product against competitors and industry standards to identify strengths, weaknesses, and opportunities for improvement.",
   },
   {
-    title: "3D Printing",
-    image: "/figma/hero-sky.jpg",
-    copy: "Prototype and end-use parts using FDM, SLA, SLS, DMLS, DLP, PolyJet, Ceramic SLA, PµSL, and MJP processes.",
-  },
-  {
-    title: "CNC Machining",
-    image: "/figma/vehicle-dashboard.jpg",
-    copy: "Precision-machined plastic and metal components for functional testing, fixtures, and production-ready samples.",
-  },
-  {
-    title: "Vacuum Casting",
-    image: "/figma/app-flow.jpg",
-    copy: "Short-run polyurethane parts that closely simulate production plastics for pilots, samples, and market testing.",
-  },
-  {
-    title: "Injection Moulding",
-    image: "/figma/web-mockup.jpg",
-    copy: "Tooling and moulded plastic part production for repeatable, scalable manufacturing requirements.",
-  },
-  {
-    title: "Sheet Metal Fabrication",
-    image: "/figma/design-desk.jpg",
-    copy: "Cut, bent, and finished sheet metal parts including enclosures, panels, brackets, and functional assemblies.",
-  },
-  {
-    title: "Metal Casting",
-    image: "/figma/car-sketch.jpg",
-    copy: "Metal components for prototypes and production where geometry, strength, and material performance matter.",
-  },
-  {
-    title: "Compression Moulding",
-    image: "/figma/vehicle-dashboard.jpg",
-    copy: "Compression moulded parts for rubber, composite, and polymer applications that need repeatable forms.",
-  },
-  {
-    title: "Electronics",
-    image: "/figma/developer.jpg",
-    copy: "PCB design, prototyping, enclosure integration, and electronics support for connected hardware products.",
-  },
-  {
-    title: "Post Processing",
-    image: "/figma/design-desk.jpg",
-    copy: "Finishing, painting, sanding, assembly, and surface treatments that make prototypes presentation-ready.",
+    title: "Visualization",
+    copy: "We create high-quality 3D models, product demo videos, and interactive prototypes to effectively showcase your product's design, features, and functionality.",
   },
 ];
 
@@ -522,40 +479,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="bg-[#fbf3e5] py-16 sm:py-24">
+      <section id="services" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <h2 className="section-title text-center text-5xl font-black tracking-tight">
-            What <span className="text-[#b96b35]">We Do</span>
+          <h2 className="section-title text-4xl font-black tracking-tight text-[#4f5661] sm:text-5xl">
+            Our Services
           </h2>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <a
+          <div className="mt-2 h-1 w-24 bg-[#f28a18]" />
+
+          <div className="relative mx-auto mt-12 grid max-w-5xl gap-8 md:min-h-[430px] md:grid-cols-2">
+            <div className="pointer-events-none absolute left-1/2 top-1/2 hidden h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full border-[24px] border-[#fde8e8] md:block" />
+
+            {services.map((service, index) => (
+              <article
                 key={service.title}
-                href="#contact"
-                className="service-card group overflow-hidden rounded-sm bg-white shadow-[0_10px_34px_rgba(22,28,45,0.08)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(185,107,53,0.14)]"
+                className={`relative z-10 max-w-sm ${
+                  index === 0
+                    ? "md:self-start md:pt-14"
+                    : index === 1
+                      ? "md:justify-self-end md:self-start md:pt-14"
+                      : "md:col-span-2 md:mx-auto md:w-full md:self-end md:pb-4"
+                }`}
               >
-                <div className="relative aspect-[1.35] bg-[#e4ded4]">
-                  <Image
-                    src={service.image}
-                    alt=""
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(14,20,34,0.02),rgba(14,20,34,0.36))]" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-black text-[#13233a] transition group-hover:text-[#8a4f2a]">
-                    {service.title}
-                  </h3>
-                  <p className="font-ui mt-3 text-sm font-semibold leading-6 text-[#606a7a]">
-                    {service.copy}
-                  </p>
-                  <span className="font-ui mt-5 inline-flex text-sm font-black text-[#8a4f2a]">
-                    Know more -&gt;
-                  </span>
-                </div>
-              </a>
+                <h3 className="text-2xl font-semibold text-[#303744]">
+                  {service.title}
+                </h3>
+                <div className="mt-1 h-0.5 w-36 bg-[#f28a18]" />
+                <p className="mt-2 text-base font-medium leading-6 text-[#6a7180]">
+                  {service.copy}
+                </p>
+              </article>
             ))}
           </div>
         </div>
