@@ -28,7 +28,7 @@ export default function ServiceDetail({
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#075ee8]">
             {eyebrow}
           </p>
-          <h1 className="mt-4 text-5xl font-black tracking-[-0.04em] sm:text-6xl">
+          <h1 className="mt-4 text-4xl font-black tracking-[-0.04em] sm:text-6xl">
             {title}
           </h1>
           <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#5f6675]">

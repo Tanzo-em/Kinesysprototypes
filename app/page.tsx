@@ -156,7 +156,7 @@ export default function Home() {
       <SiteHeader />
 
       <section className="bg-[linear-gradient(180deg,#edf3ff_0%,#ffffff_100%)] px-5 pb-8 pt-4 sm:px-8 sm:pb-12 sm:pt-6 lg:px-10 lg:pb-16 lg:pt-8">
-        <div className="relative mx-auto min-h-[620px] max-w-7xl overflow-hidden rounded-[2rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px]">
+        <div className="relative mx-auto min-h-[560px] max-w-7xl overflow-hidden rounded-[1.25rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px] sm:rounded-[2rem]">
           {heroSlides.map((slide, index) => (
             <div
               key={slide.title}
@@ -177,18 +177,18 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,18,0.9)_0%,rgba(8,12,18,0.7)_42%,rgba(8,12,18,0.2)_75%,rgba(8,12,18,0.1)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,12,18,0.45),transparent_45%)]" />
 
-          <div className="relative z-10 flex min-h-[620px] max-w-2xl flex-col justify-center px-7 py-16 sm:min-h-[680px] sm:px-12 lg:px-16">
+          <div className="relative z-10 flex min-h-[560px] max-w-2xl flex-col justify-center px-6 py-12 sm:min-h-[680px] sm:px-12 sm:py-16 lg:px-16">
             <p className="mb-5 text-sm font-black uppercase tracking-[0.2em] text-[#78a9ff]">
               Home
             </p>
-            <h1 className="section-title max-w-xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="section-title max-w-xl text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Transform your ideas into reality
             </h1>
-            <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-white/85 sm:text-xl">
+            <p className="mt-5 max-w-xl text-base font-semibold leading-7 text-white/85 sm:mt-6 sm:text-xl sm:leading-8">
               From 3D printing and prototyping to full-scale manufacturing in
               Pune, Tesseract is your product development partner.
             </p>
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
               <a
                 href="#contact"
                 className="rounded-lg bg-[#075ee8] px-9 py-4 text-center text-base font-black text-white shadow-[0_16px_36px_rgba(7,94,232,0.3)] transition hover:bg-[#064dbd]"
@@ -208,7 +208,7 @@ export default function Home() {
 
       <section id="expertise" className="bg-white py-16 sm:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
-          <div className="relative min-h-[460px] overflow-hidden rounded-sm bg-[#e9e4dc]">
+          <div className="relative min-h-[320px] overflow-hidden rounded-xl bg-[#e9e4dc] sm:min-h-[460px]">
             <Image
               src="/figma/design-desk.jpg"
               alt="Design desk with creative materials"
@@ -219,7 +219,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col justify-center">
-            <h2 className="section-title text-5xl font-black tracking-tight text-[#13233a]">
+            <h2 className="section-title text-4xl font-black tracking-tight text-[#13233a] sm:text-5xl">
               Our <span className="text-[#075ee8]">Expertise</span>
             </h2>
             <p className="mt-7 text-base font-semibold leading-8 text-[#5f6675]">
@@ -238,7 +238,7 @@ export default function Home() {
             <div className="mt-10 grid grid-cols-2 gap-x-8 gap-y-9">
               {stats.map(([value, label]) => (
                 <div key={label}>
-                  <p className="font-ui text-6xl font-black text-[#075ee8]">{value}</p>
+                  <p className="font-ui text-4xl font-black text-[#075ee8] sm:text-6xl">{value}</p>
                   <p className="font-ui mt-2 text-sm font-black uppercase tracking-[0.16em] text-[#13233a]">
                     {label}
                   </p>
@@ -257,7 +257,7 @@ export default function Home() {
 
       <section id="services" className="bg-[#edf3ff] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <h2 className="section-title text-center text-5xl font-black tracking-tight">
+          <h2 className="section-title text-center text-4xl font-black tracking-tight sm:text-5xl">
             What <span className="text-[#075ee8]">We Do</span>
           </h2>
           <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
@@ -300,7 +300,7 @@ export default function Home() {
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
               Where we create impact
             </p>
-            <h2 className="section-title mt-3 text-5xl font-black tracking-tight">
+            <h2 className="section-title mt-3 text-4xl font-black tracking-tight sm:text-5xl">
               Industries <span className="text-[#075ee8]">& Applications</span>
             </h2>
             <p className="mt-5 text-base font-medium leading-7 text-[#5f6675]">
@@ -336,7 +336,7 @@ export default function Home() {
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
               Why work with us
             </p>
-            <h2 className="section-title mt-3 text-5xl font-black tracking-tight">
+            <h2 className="section-title mt-3 text-4xl font-black tracking-tight sm:text-5xl">
               Our <span className="text-[#075ee8]">USPs</span>
             </h2>
             <p className="mt-5 text-base font-medium leading-7 text-[#5f6675]">
@@ -423,7 +423,7 @@ export default function Home() {
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
               Built for the right process
             </p>
-            <h2 className="section-title mt-3 text-5xl font-black tracking-tight">
+            <h2 className="section-title mt-3 text-4xl font-black tracking-tight sm:text-5xl">
               Materials <span className="text-[#075ee8]">We Offer</span>
             </h2>
             <p className="font-ui mt-5 text-base font-semibold leading-7 text-[#5f6675]">
@@ -468,7 +468,7 @@ export default function Home() {
       <section id="showcase" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <h2 className="section-title text-5xl font-black tracking-tight">
+            <h2 className="section-title text-4xl font-black tracking-tight sm:text-5xl">
               Build With <span className="text-[#075ee8]">Kinesysprototypes</span>
             </h2>
             <a
@@ -514,7 +514,7 @@ export default function Home() {
             <p className="font-ui text-sm font-black uppercase tracking-[0.22em] text-[#78a9ff]">
               Get a quote
             </p>
-            <h2 className="section-title mt-4 text-5xl font-black leading-tight">
+            <h2 className="section-title mt-4 text-4xl font-black leading-tight sm:text-5xl">
               Ready to turn the next idea into a manufactured product?
             </h2>
           </div>

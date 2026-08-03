@@ -106,6 +106,12 @@ export default function ImagineProcess() {
   const wheelTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const selectStage = (index: number) => {
+    const nextIndex = Math.min(stages.length - 1, Math.max(0, index));
+    activeIndexRef.current = nextIndex;
+    setActiveIndex(nextIndex);
+  };
+
   useEffect(() => {
     const graphic = graphicRef.current;
 
@@ -154,7 +160,10 @@ export default function ImagineProcess() {
       <div className="flex flex-col justify-center">
         <div className="text-center">
           <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
-            Hover over the infinity and scroll to explore
+            <span className="hidden sm:inline">
+              Hover over the infinity and scroll to explore
+            </span>
+            <span className="sm:hidden">Use the controls to explore</span>
           </p>
           <h2 className="mt-3 text-3xl font-black tracking-wide text-[#081d46] sm:text-4xl">
             Our Patented <span className="text-[#075ee8]">IMAGINE</span> Process
@@ -229,15 +238,38 @@ export default function ImagineProcess() {
               {activeStage.copy}
             </p>
 
-            <div className="mt-7 flex gap-2" aria-hidden="true">
+            <div className="mt-7 flex gap-2" aria-label="Choose an IMAGINE stage">
               {stages.map((stage, index) => (
-                <span
+                <button
+                  type="button"
                   key={stage.number}
-                  className={`h-1.5 flex-1 rounded-full transition-colors duration-300 ${
+                  aria-label={`Show stage ${stage.number}: ${stage.title}`}
+                  aria-pressed={index === activeIndex}
+                  onClick={() => selectStage(index)}
+                  className={`h-2.5 flex-1 rounded-full transition-colors duration-300 ${
                     index === activeIndex ? "bg-[#075ee8]" : "bg-[#dce8ff]"
                   }`}
                 />
               ))}
+            </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:hidden">
+              <button
+                type="button"
+                onClick={() => selectStage(activeIndex - 1)}
+                disabled={activeIndex === 0}
+                className="rounded-xl border border-[#cbdcfb] px-4 py-3 text-sm font-black text-[#243858] disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                onClick={() => selectStage(activeIndex + 1)}
+                disabled={activeIndex === stages.length - 1}
+                className="rounded-xl bg-[#075ee8] px-4 py-3 text-sm font-black text-white disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Next
+              </button>
             </div>
           </article>
         </div>
