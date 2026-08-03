@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ImagineProcess from "./components/imagine-process";
 import SiteHeader from "./components/site-header";
 
 const heroSlides = [
@@ -77,44 +78,6 @@ const imagineIndustries = [
   {
     title: "Entertainment",
     copy: "Working with entertainment clients to design engaging applications that connect audiences with content and fuel immersive experiences.",
-  },
-];
-
-const imagineStages = [
-  {
-    number: 1,
-    title: "Investigate",
-    copy: "Understand the problem and target users.",
-  },
-  {
-    number: 2,
-    title: "Map",
-    copy: "Define project goals and objectives.",
-  },
-  {
-    number: 3,
-    title: "Architect",
-    copy: "Generate ideas and create prototypes.",
-  },
-  {
-    number: 4,
-    title: "Generate",
-    copy: "Build the product or service.",
-  },
-  {
-    number: 5,
-    title: "Integrate",
-    copy: "Launch the product or service.",
-  },
-  {
-    number: 6,
-    title: "Nurture",
-    copy: "Monitor and improve the product or service.",
-  },
-  {
-    number: 7,
-    title: "Evolve",
-    copy: "Continuously adapt and improve the product or service.",
   },
 ];
 
@@ -299,83 +262,7 @@ export default function Home() {
 
       <section id="imagine" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <h2 className="font-ui text-center text-3xl font-black tracking-wide text-[#303030]">
-            Our Patented <span className="text-[#1f5edb]">IMAGINE</span> Process
-          </h2>
-          <p className="font-ui mx-auto mt-4 max-w-3xl text-center text-sm font-semibold leading-6 text-[#666]">
-            The IMAGINE Design Process is a human-centered approach that turns
-            user needs into products and services through continuous improvement.
-          </p>
-
-          <div className="mt-12 grid items-center gap-10 lg:grid-cols-[0.7fr_1.6fr_0.7fr] lg:gap-6">
-            <div className="grid gap-7 sm:grid-cols-3 lg:grid-cols-1">
-              {imagineStages.slice(0, 3).map((stage) => (
-                <article key={stage.number} className="font-ui">
-                  <h3 className="text-xl font-black text-[#303030]">
-                    <span className="text-[#1f5edb]">{stage.number}.</span>{" "}
-                    {stage.title}
-                  </h3>
-                  <p className="mt-1 text-sm font-semibold leading-5 text-[#666]">
-                    {stage.copy}
-                  </p>
-                </article>
-              ))}
-            </div>
-
-            <div className="relative mx-auto aspect-[2.1] w-full max-w-[820px]">
-              <svg
-                viewBox="0 0 820 390"
-                className="h-full w-full"
-                role="img"
-                aria-label="IMAGINE process infinity diagram"
-              >
-                <title>Seven-stage IMAGINE design process</title>
-                <desc>
-                  A continuous infinity loop showing the seven stages of the
-                  IMAGINE design process, with Investigate highlighted as stage one.
-                </desc>
-                <path
-                  d="M70 195 C70 100 125 55 205 55 C295 55 345 140 410 195 C475 250 525 335 615 335 C695 335 750 290 750 195 C750 100 695 55 615 55 C525 55 475 140 410 195 C345 250 295 335 205 335 C125 335 70 290 70 195"
-                  fill="none"
-                  stroke="#88a9ed"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="34"
-                />
-                <path
-                  d="M316.875 285.625 C285 313.75 250 335 205 335 C157 335 118 318.8 94.48 285.32"
-                  fill="none"
-                  stroke="#1f5edb"
-                  strokeLinecap="butt"
-                  strokeLinejoin="round"
-                  strokeWidth="34"
-                />
-                <g fill="#fff" textAnchor="middle" dominantBaseline="middle" className="font-ui text-[14px] font-black">
-                  <text x="205" y="335">1</text>
-                  <text x="70" y="195">2</text>
-                  <text x="205" y="55">3</text>
-                  <text x="410" y="195">4</text>
-                  <text x="615" y="335">5</text>
-                  <text x="750" y="195">6</text>
-                  <text x="615" y="55">7</text>
-                </g>
-              </svg>
-            </div>
-
-            <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-1">
-              {imagineStages.slice(3).map((stage) => (
-                <article key={stage.number} className="font-ui">
-                  <h3 className="text-xl font-black text-[#303030]">
-                    <span className="text-[#1f5edb]">{stage.number}.</span>{" "}
-                    {stage.title}
-                  </h3>
-                  <p className="mt-1 text-sm font-semibold leading-5 text-[#666]">
-                    {stage.copy}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
+          <ImagineProcess />
 
           <h3 className="font-ui mt-16 text-center text-3xl font-black tracking-wide text-[#303030]">
             Designing for Diverse <span className="text-[#1f5edb]">Industries</span>
