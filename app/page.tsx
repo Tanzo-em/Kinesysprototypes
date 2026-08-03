@@ -296,16 +296,34 @@ export default function Home() {
 
       <section id="industries" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <h2 className="section-title text-center text-5xl font-black tracking-tight">
-            Industries <span className="text-[#075ee8]">& Applications</span>
-          </h2>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {industries.map((industry) => (
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
+              Where we create impact
+            </p>
+            <h2 className="section-title mt-3 text-5xl font-black tracking-tight">
+              Industries <span className="text-[#075ee8]">& Applications</span>
+            </h2>
+            <p className="mt-5 text-base font-medium leading-7 text-[#5f6675]">
+              Cross-industry design and manufacturing support for products that
+              need thoughtful engineering, reliable performance, and clear execution.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {industries.map((industry, index) => (
               <div
                 key={industry}
-                className="font-ui rounded-lg border border-[#cbdcfb] bg-[#f5f8ff] px-5 py-6 text-center text-lg font-black text-[#081d46] transition hover:border-[#075ee8] hover:text-[#075ee8]"
+                className="group relative overflow-hidden rounded-2xl border border-[#d6e3fa] bg-[linear-gradient(135deg,#ffffff_0%,#f3f7ff_100%)] p-5 shadow-[0_10px_30px_rgba(7,54,130,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[#8ab4ff] hover:shadow-[0_20px_45px_rgba(7,94,232,0.12)]"
               >
-                {industry}
+                <div className="flex items-center gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e2ecff] text-sm font-black text-[#075ee8] transition group-hover:bg-[#075ee8] group-hover:text-white">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="text-lg font-black text-[#081d46] transition group-hover:text-[#075ee8]">
+                    {industry}
+                  </span>
+                </div>
+                <span className="absolute -bottom-8 -right-8 h-20 w-20 rounded-full bg-[#dce8ff]/70 transition duration-300 group-hover:scale-150" />
               </div>
             ))}
           </div>
@@ -314,22 +332,38 @@ export default function Home() {
 
       <section className="bg-[#edf3ff] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <h2 className="section-title text-center text-5xl font-black tracking-tight">
-            USPs
-          </h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
-            {strengths.map((item) => (
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
+              Why work with us
+            </p>
+            <h2 className="section-title mt-3 text-5xl font-black tracking-tight">
+              Our <span className="text-[#075ee8]">USPs</span>
+            </h2>
+            <p className="mt-5 text-base font-medium leading-7 text-[#5f6675]">
+              Practical advantages that keep projects clear, production-aware,
+              and moving toward a high-quality result.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {strengths.map((item, index) => (
               <article
                 key={item.title}
-                className="rounded-xl bg-white p-6 shadow-[0_12px_34px_rgba(7,54,130,0.07)] transition hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(7,94,232,0.14)]"
+                className="group relative overflow-hidden rounded-2xl border border-white/80 bg-white p-6 shadow-[0_12px_34px_rgba(7,54,130,0.07)] transition duration-300 hover:-translate-y-1.5 hover:border-[#b8cff8] hover:shadow-[0_24px_60px_rgba(7,94,232,0.14)]"
               >
-                <div className="mb-6 h-20 rounded-lg bg-[#dce8ff]" />
-                <h3 className="text-xl font-black text-[#13233a]">
+                <div className="mb-7 flex items-center justify-between">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e2ecff] text-lg font-black text-[#075ee8] transition group-hover:bg-[#075ee8] group-hover:text-white">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="h-px flex-1 bg-[linear-gradient(90deg,#b8cff8,transparent)]" />
+                </div>
+                <h3 className="text-xl font-black text-[#081d46]">
                   {item.title}
                 </h3>
-                <p className="font-ui mt-4 text-sm font-semibold leading-6 text-[#606a7a]">
+                <p className="mt-4 text-sm font-medium leading-6 text-[#606a7a]">
                   {item.copy}
                 </p>
+                <div className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-[#075ee8] transition-transform duration-300 group-hover:scale-x-100" />
               </article>
             ))}
           </div>
@@ -386,7 +420,10 @@ export default function Home() {
       <section id="materials" className="bg-[#edf3ff] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="section-title text-5xl font-black tracking-tight">
+            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
+              Built for the right process
+            </p>
+            <h2 className="section-title mt-3 text-5xl font-black tracking-tight">
               Materials <span className="text-[#075ee8]">We Offer</span>
             </h2>
             <p className="font-ui mt-5 text-base font-semibold leading-7 text-[#5f6675]">
@@ -396,19 +433,27 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {materials.map((group) => (
+            {materials.map((group, index) => (
               <article
                 key={group.process}
-                className="rounded-lg border border-[#cbdcfb] bg-white p-6 shadow-[0_10px_30px_rgba(7,54,130,0.06)]"
+                className="group rounded-2xl border border-[#cbdcfb] bg-[linear-gradient(145deg,#ffffff_0%,#f8faff_100%)] p-6 shadow-[0_10px_30px_rgba(7,54,130,0.06)] transition duration-300 hover:-translate-y-1 hover:border-[#8ab4ff] hover:shadow-[0_22px_50px_rgba(7,94,232,0.12)]"
               >
-                <h3 className="text-2xl font-black text-[#13233a]">
-                  {group.process}
-                </h3>
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-2xl font-black text-[#081d46] transition group-hover:text-[#075ee8]">
+                    {group.process}
+                  </h3>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#075ee8] text-sm font-black text-white">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <p className="mt-2 text-xs font-bold uppercase tracking-[0.14em] text-[#7a8ba8]">
+                  {group.items.length} material options
+                </p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {group.items.map((item) => (
                     <span
                       key={item}
-                      className="font-ui rounded-full border border-[#b8cff8] bg-[#eef4ff] px-3 py-2 text-xs font-black text-[#075ee8]"
+                      className="rounded-full border border-[#c5d8fa] bg-[#eef4ff] px-3 py-2 text-xs font-bold text-[#315f9e] transition group-hover:border-[#9dbcf3] group-hover:bg-white"
                     >
                       {item}
                     </span>
