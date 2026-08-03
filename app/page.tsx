@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SiteHeader from "./components/site-header";
 
 const heroSlides = [
   {
@@ -196,83 +197,7 @@ const showcase = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#fbf3e5] text-[#161c2d]">
-      <div className="bg-[#8a4f2a] px-5 py-2 text-center text-sm font-bold text-white">
-        Upload your brief for a fast creative estimate
-      </div>
-
-      <header className="sticky top-0 z-50 border-b border-[#e8e1d8] bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8 lg:px-10">
-          <a href="#" className="flex items-center gap-3" aria-label="Kinesysprototypes home">
-            <Image
-              src="/kinesysprototypes-logo.png"
-              alt="Kinesysprototypes logo"
-              width={72}
-              height={48}
-              priority
-              className="h-12 w-[72px] rounded-sm object-cover"
-            />
-            <span className="text-2xl font-black tracking-tight text-[#13233a]">
-              Kinesysprototypes
-            </span>
-          </a>
-
-          <nav className="font-ui hidden items-center gap-7 text-sm font-bold text-[#4e5668] lg:flex">
-            <div className="group relative py-3">
-              <a href="#services" className="transition hover:text-[#b96b35]">
-                Services
-              </a>
-              <div className="invisible absolute left-0 top-full w-72 translate-y-3 rounded-sm border border-[#e8e1d8] bg-white py-3 opacity-0 shadow-[0_24px_60px_rgba(22,28,45,0.14)] transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
-                {services.map((service) => (
-                  <a
-                    key={service.title}
-                    href="#services"
-                    className="block border-b border-[#f0e4d7] px-5 py-3 text-[#283042] transition last:border-b-0 hover:bg-[#fbf3e5] hover:text-[#8a4f2a]"
-                  >
-                    {service.title}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <a href="#expertise" className="transition hover:text-[#b96b35]">
-              Expertise
-            </a>
-            <a href="#imagine" className="transition hover:text-[#b96b35]">
-              IMAGINE
-            </a>
-            <a href="#industries" className="transition hover:text-[#b96b35]">
-              Industries
-            </a>
-            <a href="#materials" className="transition hover:text-[#b96b35]">
-              Materials
-            </a>
-            <a href="#showcase" className="transition hover:text-[#b96b35]">
-              Packages
-            </a>
-            <a href="#join" className="transition hover:text-[#b96b35]">
-              Join Now
-            </a>
-            <a href="#contact" className="transition hover:text-[#b96b35]">
-              Contact
-            </a>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <a
-              href="#contact"
-              className="font-ui hidden rounded-sm border border-[#b96b35] px-6 py-3 text-sm font-black text-[#8a4f2a] transition hover:bg-[#b96b35] hover:text-white sm:inline-flex"
-            >
-              Get Quote
-            </a>
-            <a
-              href="#contact"
-              aria-label="Contact Kinesysprototypes"
-              className="font-ui flex h-10 w-10 items-center justify-center rounded-full bg-[#13233a] text-lg font-black text-white"
-            >
-              ?
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="bg-[#f3eadc]">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-20">

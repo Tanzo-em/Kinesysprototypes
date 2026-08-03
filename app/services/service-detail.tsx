@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "../components/site-header";
 
 type ServiceDetailProps = {
   title: string;
@@ -20,19 +21,7 @@ export default function ServiceDetail({
 }: ServiceDetailProps) {
   return (
     <main className="min-h-screen bg-[#fbf3e5] text-[#13233a]">
-      <header className="border-b border-[#e8e1d8] bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10">
-          <Link href="/" className="text-xl font-black tracking-tight">
-            Kinesysprototypes
-          </Link>
-          <Link
-            href="/#services"
-            className="text-sm font-bold text-[#8a4f2a] transition hover:text-[#13233a]"
-          >
-            Back to services
-          </Link>
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-24">
         <div className="flex flex-col justify-center">
