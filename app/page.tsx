@@ -3,20 +3,24 @@ import SiteHeader from "./components/site-header";
 
 const heroSlides = [
   {
-    title: "Product design workspace",
-    image: "/figma/design-desk.jpg",
+    title: "Industrial additive manufacturing system",
+    image: "/hero/industrial-printer.png",
   },
   {
-    title: "CAD and prototype planning",
-    image: "/figma/web-mockup.jpg",
+    title: "Production-ready 3D printed components",
+    image: "/hero/printer-in-production.png",
   },
   {
-    title: "Industrial concept visuals",
-    image: "/figma/blue-illustration.jpg",
+    title: "Precision components inside the printer",
+    image: "/hero/printed-components.png",
   },
   {
-    title: "Engineering development",
-    image: "/figma/developer.jpg",
+    title: "Manufactured automotive parts",
+    image: "/hero/manufactured-parts.png",
+  },
+  {
+    title: "Automotive prototypes and assemblies",
+    image: "/hero/automotive-prototypes.png",
   },
 ];
 
@@ -199,60 +203,52 @@ export default function Home() {
     <main className="min-h-screen bg-[#fbf3e5] text-[#161c2d]">
       <SiteHeader />
 
-      <section className="bg-[#f3eadc]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:py-20">
-          <div className="flex flex-col justify-center">
-            <p className="font-ui mb-5 text-sm font-black uppercase tracking-[0.2em] text-[#8a4f2a]">
+      <section className="bg-[#f3eadc] px-5 py-8 sm:px-8 sm:py-12 lg:px-10 lg:py-16">
+        <div className="relative mx-auto min-h-[620px] max-w-7xl overflow-hidden rounded-[2rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px]">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={slide.title}
+              className="hero-slide absolute inset-0"
+              style={{ animationDelay: `${index * 5}s` }}
+            >
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                priority={index === 0}
+                sizes="(min-width: 1280px) 1280px, 100vw"
+                className="object-cover object-center"
+              />
+            </div>
+          ))}
+
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,18,0.9)_0%,rgba(8,12,18,0.7)_42%,rgba(8,12,18,0.2)_75%,rgba(8,12,18,0.1)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,12,18,0.45),transparent_45%)]" />
+
+          <div className="relative z-10 flex min-h-[620px] max-w-2xl flex-col justify-center px-7 py-16 sm:min-h-[680px] sm:px-12 lg:px-16">
+            <p className="mb-5 text-sm font-black uppercase tracking-[0.2em] text-[#f0a36f]">
               Home
             </p>
-            <h1 className="section-title max-w-xl text-5xl font-black leading-[1.05] tracking-tight text-[#0e1422] sm:text-6xl">
+            <h1 className="section-title max-w-xl text-5xl font-black leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Transform your ideas into reality
             </h1>
-            <p className="mt-6 max-w-xl text-xl font-semibold leading-8 text-[#343c4f]">
+            <p className="mt-6 max-w-xl text-lg font-semibold leading-8 text-white/85 sm:text-xl">
               From 3D printing and prototyping to full-scale manufacturing in
               Pune, Tesseract is your product development partner.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#contact"
-                className="font-ui rounded-sm bg-[#b96b35] px-9 py-4 text-center text-base font-black text-white shadow-[0_16px_36px_rgba(185,107,53,0.22)] transition hover:bg-[#8a4f2a]"
+                className="rounded-sm bg-[#b96b35] px-9 py-4 text-center text-base font-black text-white shadow-[0_16px_36px_rgba(185,107,53,0.3)] transition hover:bg-[#8a4f2a]"
               >
                 Get Quote
               </a>
               <a
                 href="#services"
-                className="font-ui rounded-sm border border-[#d8bea4] bg-white px-9 py-4 text-center text-base font-black text-[#13233a] transition hover:border-[#b96b35]"
+                className="rounded-sm border border-white/60 bg-white/10 px-9 py-4 text-center text-base font-black text-white backdrop-blur-sm transition hover:border-white hover:bg-white hover:text-[#13233a]"
               >
                 See Services
               </a>
-            </div>
-          </div>
-
-          <div className="relative min-h-[430px] overflow-hidden rounded-sm bg-[#ddd9d2] shadow-[0_24px_80px_rgba(22,28,45,0.12)] lg:min-h-[560px]">
-            {heroSlides.map((slide, index) => (
-              <div
-                key={slide.title}
-                className="hero-slide absolute inset-0"
-                style={{ animationDelay: `${index * 4}s` }}
-              >
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  priority={index === 0}
-                  sizes="(min-width: 1024px) 58vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            ))}
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(14,20,34,0.24),rgba(14,20,34,0.04))]" />
-            <div className="absolute bottom-6 left-6 max-w-sm rounded-sm bg-white/92 p-5 shadow-[0_18px_40px_rgba(22,28,45,0.16)] backdrop-blur">
-              <p className="font-ui text-sm font-black uppercase tracking-[0.16em] text-[#8a4f2a]">
-                Image slideshow
-              </p>
-              <p className="mt-2 text-2xl font-black text-[#151b2a]">
-                Product, prototype, and manufacturing visuals can drop into this carousel.
-              </p>
             </div>
           </div>
         </div>
