@@ -43,6 +43,16 @@ const stages = [
 const infinityPath =
   "M205 335 C125 335 70 290 70 195 C70 100 125 55 205 55 C295 55 345 140 410 195 C475 250 525 335 615 335 C695 335 750 290 750 195 C750 100 695 55 615 55 C525 55 475 140 410 195 C345 250 295 335 205 335";
 
+const stagePaths = [
+  "M316.875 285.625 C285 313.75 250 335 205 335 C157 335 118 318.8 94.48 285.32",
+  "M107.5 300.625 C83.75 277.5 70 242.5 70 195 C70 147.5 83.75 112.5 107.5 89.375",
+  "M107.5 89.375 C131.25 66.25 165 55 205 55 C250 55 285 76.25 316.875 104.375",
+  "M316.875 104.375 C348.75 132.5 377.5 167.5 410 195 C442.5 222.5 471.25 257.5 503.125 285.625",
+  "M503.125 285.625 C535 313.75 570 335 615 335 C655 335 688.75 323.75 712.5 300.625",
+  "M712.5 300.625 C736.25 277.5 750 242.5 750 195 C750 147.5 736.25 112.5 712.5 89.375",
+  "M712.5 89.375 C688.75 66.25 655 55 615 55 C570 55 535 76.25 503.125 104.375",
+];
+
 export default function ImagineProcess() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -102,18 +112,20 @@ export default function ImagineProcess() {
                 strokeLinejoin="round"
                 strokeWidth="34"
               />
-              <path
-                d={infinityPath}
-                fill="none"
-                pathLength="7"
-                stroke="#075ee8"
-                strokeDasharray="0.78 6.22"
-                strokeDashoffset={0.39 - activeIndex}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="34"
-                className="transition-[stroke-dashoffset] duration-500 ease-out"
-              />
+              {stagePaths.map((path, index) => (
+                <path
+                  key={path}
+                  d={path}
+                  fill="none"
+                  stroke="#075ee8"
+                  strokeLinecap="butt"
+                  strokeLinejoin="round"
+                  strokeWidth="34"
+                  className={`transition-opacity duration-300 ${
+                    index === activeIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
               <g
                 fill="#fff"
                 textAnchor="middle"
