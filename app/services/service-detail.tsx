@@ -11,7 +11,7 @@ type ServiceDetailProps = {
   imageAlt: string;
   imageFit?: "cover" | "contain";
   compactHero?: boolean;
-  compactDeliverables?: boolean;
+  hideDeliverables?: boolean;
   deliverables: string[];
   children?: ReactNode;
   footer?: ReactNode;
@@ -25,7 +25,7 @@ export default function ServiceDetail({
   imageAlt,
   imageFit = "cover",
   compactHero = false,
-  compactDeliverables = false,
+  hideDeliverables = false,
   deliverables,
   children,
   footer,
@@ -77,31 +77,23 @@ export default function ServiceDetail({
 
       {children}
 
-      <section
-        className={`bg-white ${compactDeliverables ? "py-10 sm:py-12" : "py-14 sm:py-20"}`}
-      >
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <h2
-            className={`${compactDeliverables ? "text-2xl" : "text-3xl"} font-black tracking-tight`}
-          >
-            What we can deliver
-          </h2>
-          <div
-            className={`${compactDeliverables ? "mt-5 gap-3" : "mt-8 gap-4"} grid sm:grid-cols-2 lg:grid-cols-3`}
-          >
-            {deliverables.map((deliverable) => (
-              <div
-                key={deliverable}
-                className={`rounded-lg border border-[#cbdcfb] bg-[#eef4ff] text-base font-bold text-[#243858] ${
-                  compactDeliverables ? "px-5 py-4" : "p-6"
-                }`}
-              >
-                {deliverable}
-              </div>
-            ))}
+      {!hideDeliverables && (
+        <section className="bg-white py-14 sm:py-20">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+            <h2 className="text-3xl font-black tracking-tight">What we can deliver</h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {deliverables.map((deliverable) => (
+                <div
+                  key={deliverable}
+                  className="rounded-lg border border-[#cbdcfb] bg-[#eef4ff] p-6 text-base font-bold text-[#243858]"
+                >
+                  {deliverable}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {footer}
     </main>

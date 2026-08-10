@@ -52,7 +52,7 @@ export default function ProductDesignPage() {
       image="/figma/car-sketch.jpg"
       imageAlt="Automotive product design sketch"
       compactHero
-      compactDeliverables
+      hideDeliverables
       deliverables={[
         "User and product research",
         "Concept exploration",
