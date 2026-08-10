@@ -52,6 +52,7 @@ export default function ProductDesignPage() {
       image="/figma/car-sketch.jpg"
       imageAlt="Automotive product design sketch"
       compactHero
+      compactDeliverables
       deliverables={[
         "User and product research",
         "Concept exploration",
@@ -60,6 +61,26 @@ export default function ProductDesignPage() {
         "Design-for-manufacturing review",
         "Prototype planning",
       ]}
+      footer={
+        <section className="bg-[#071a3d] px-5 pb-16 sm:px-8 sm:pb-24 lg:px-10">
+          <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-2xl bg-[#0b5de8] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-100">
+                Have a product idea?
+              </p>
+              <p className="mt-2 text-2xl font-black tracking-tight text-white sm:text-3xl">
+                Let&apos;s shape it into something real.
+              </p>
+            </div>
+            <QuoteButton
+              service="Product Design"
+              className="inline-flex w-max rounded-lg bg-white px-7 py-4 text-sm font-black text-[#075ee8] transition hover:bg-blue-50"
+            >
+              Start a conversation
+            </QuoteButton>
+          </div>
+        </section>
+      }
     >
       <section className="overflow-hidden bg-[#071a3d] py-16 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
@@ -113,22 +134,6 @@ export default function ProductDesignPage() {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-col gap-5 rounded-2xl bg-[#0b5de8] p-7 sm:flex-row sm:items-center sm:justify-between sm:p-10">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-100">
-                Have a product idea?
-              </p>
-              <p className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">
-                Let&apos;s shape it into something real.
-              </p>
-            </div>
-            <QuoteButton
-              service="Product Design"
-              className="inline-flex w-max rounded-lg bg-white px-7 py-4 text-sm font-black text-[#075ee8] transition hover:bg-blue-50"
-            >
-              Start a conversation
-            </QuoteButton>
-          </div>
         </div>
       </section>
     </ServiceDetail>
