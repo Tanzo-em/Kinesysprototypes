@@ -59,6 +59,8 @@ export default function ServiceDetail({
         </div>
       </section>
 
+      {children}
+
       <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="text-3xl font-black tracking-tight">What we can deliver</h2>
@@ -74,8 +76,6 @@ export default function ServiceDetail({
           </div>
         </div>
       </section>
-
-      {children}
     </main>
   );
 }
