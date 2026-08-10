@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useQuote } from "./quote-modal";
 
 const serviceLinks = [
   { title: "Product Design", href: "/services/product-design" },
@@ -21,6 +22,7 @@ const navigationLinks = [
 
 export default function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { openQuote } = useQuote();
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
@@ -85,12 +87,13 @@ export default function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link
-              href="/#contact"
+            <button
+              type="button"
+              onClick={() => openQuote()}
               className="rounded-lg bg-[#075ee8] px-6 py-3 text-sm font-black text-white shadow-[0_10px_25px_rgba(7,94,232,0.24)] transition hover:bg-[#064dbd]"
             >
               Get Quote
-            </Link>
+            </button>
             <Link
               href="/#contact"
               aria-label="Contact Kinesysprototypes"
@@ -158,13 +161,16 @@ export default function SiteHeader() {
               ))}
             </div>
 
-            <Link
-              href="/#contact"
-              onClick={closeMobileMenu}
+            <button
+              type="button"
+              onClick={() => {
+                closeMobileMenu();
+                openQuote();
+              }}
               className="mt-4 flex w-full items-center justify-center rounded-xl bg-[#075ee8] px-5 py-3.5 text-sm font-black text-white"
             >
               Get Quote
-            </Link>
+            </button>
           </nav>
         )}
       </header>

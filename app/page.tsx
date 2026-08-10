@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ImagineProcess from "./components/imagine-process";
+import { QuoteButton } from "./components/quote-modal";
 import SiteHeader from "./components/site-header";
 
 const heroSlides = [
@@ -189,12 +190,11 @@ export default function Home() {
               Pune, Tesseract is your product development partner.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
-              <a
-                href="#contact"
+              <QuoteButton
                 className="rounded-lg bg-[#075ee8] px-9 py-4 text-center text-base font-black text-white shadow-[0_16px_36px_rgba(7,94,232,0.3)] transition hover:bg-[#064dbd]"
               >
                 Get Quote
-              </a>
+              </QuoteButton>
               <a
                 href="#services"
                 className="rounded-sm border border-white/60 bg-white/10 px-9 py-4 text-center text-base font-black text-white backdrop-blur-sm transition hover:border-white hover:bg-white hover:text-[#13233a]"
@@ -500,12 +500,12 @@ export default function Home() {
             <h2 className="section-title text-4xl font-black tracking-tight sm:text-5xl">
               Build With <span className="text-[#075ee8]">Kinesysprototypes</span>
             </h2>
-            <a
-              href="#contact"
+            <QuoteButton
+              service="Other"
               className="font-ui w-max rounded-lg bg-[#081d46] px-7 py-4 text-sm font-black text-white transition hover:bg-[#075ee8]"
             >
               Request package
-            </a>
+            </QuoteButton>
           </div>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -547,39 +547,17 @@ export default function Home() {
               Ready to turn the next idea into a manufactured product?
             </h2>
           </div>
-          <form className="grid gap-4 rounded-sm bg-white p-6 text-[#13233a] sm:grid-cols-2">
-            <input
-              aria-label="Name"
-              placeholder="Name"
-              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
-            />
-            <input
-              aria-label="Email"
-              placeholder="Email"
-              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
-            />
-            <input
-              aria-label="Phone"
-              placeholder="Phone"
-              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
-            />
-            <input
-              aria-label="Project type"
-              placeholder="Project type"
-              className="rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8]"
-            />
-            <textarea
-              aria-label="Message"
-              placeholder="Tell us what you want to build"
-              className="min-h-32 rounded-lg border border-[#cbdcfb] px-4 py-4 text-sm font-bold outline-none focus:border-[#075ee8] sm:col-span-2"
-            />
-            <button
-              type="button"
-              className="font-ui rounded-lg bg-[#075ee8] px-7 py-4 text-sm font-black text-white transition hover:bg-[#064dbd] sm:col-span-2"
-            >
-              Send enquiry
-            </button>
-          </form>
+          <div className="rounded-2xl border border-white/15 bg-white/10 p-6 backdrop-blur-sm sm:p-8">
+            <h3 className="text-2xl font-black">Share your requirements</h3>
+            <p className="mt-3 max-w-xl text-sm font-medium leading-6 text-[#c8d5e8]">
+              Tell us about the service, material, quantity, timeline, and attach
+              your CAD model or reference file. Your request will be sent directly
+              to our team for review.
+            </p>
+            <QuoteButton className="mt-7 flex w-full items-center justify-center rounded-xl bg-[#075ee8] px-7 py-4 text-sm font-black text-white transition hover:bg-[#176ff3] sm:w-max">
+              Open quote form
+            </QuoteButton>
+          </div>
         </div>
       </section>
 

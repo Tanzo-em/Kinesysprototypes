@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import SiteHeader from "../components/site-header";
+import { QuoteButton } from "../components/quote-modal";
 
 type ServiceDetailProps = {
   title: string;
@@ -34,12 +34,12 @@ export default function ServiceDetail({
           <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#5f6675]">
             {description}
           </p>
-          <Link
-            href="/#contact"
+          <QuoteButton
+            service={title}
             className="mt-8 inline-flex w-max rounded-lg bg-[#075ee8] px-8 py-4 text-sm font-black text-white transition hover:bg-[#064dbd]"
           >
             Discuss your project
-          </Link>
+          </QuoteButton>
         </div>
 
         <div className="relative min-h-[360px] overflow-hidden rounded-sm bg-[#e4ded4] shadow-[0_24px_70px_rgba(22,28,45,0.14)] sm:min-h-[520px]">
