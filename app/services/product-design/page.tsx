@@ -14,7 +14,6 @@ export default function ProductDesignPage() {
       description="We turn early ideas into intuitive, visually compelling products. Our process balances user needs, brand identity, usability, and manufacturability so every design is ready for meaningful testing and development."
       image="/figma/product-design-concepts.png"
       imageAlt="Automotive product design sketches and concept renderings"
-      imageFit="contain"
       deliverables={[
         "User and product research",
         "Concept exploration",
