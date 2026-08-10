@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import SiteHeader from "../components/site-header";
 import { QuoteButton } from "../components/quote-modal";
 
@@ -10,6 +11,7 @@ type ServiceDetailProps = {
   imageAlt: string;
   imageFit?: "cover" | "contain";
   deliverables: string[];
+  children?: ReactNode;
 };
 
 export default function ServiceDetail({
@@ -20,6 +22,7 @@ export default function ServiceDetail({
   imageAlt,
   imageFit = "cover",
   deliverables,
+  children,
 }: ServiceDetailProps) {
   return (
     <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
@@ -71,6 +74,8 @@ export default function ServiceDetail({
           </div>
         </div>
       </section>
+
+      {children}
     </main>
   );
 }
