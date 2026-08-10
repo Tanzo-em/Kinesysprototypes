@@ -10,6 +10,7 @@ type ServiceDetailProps = {
   image: string;
   imageAlt: string;
   imageFit?: "cover" | "contain";
+  compactHero?: boolean;
   deliverables: string[];
   children?: ReactNode;
 };
@@ -21,6 +22,7 @@ export default function ServiceDetail({
   image,
   imageAlt,
   imageFit = "cover",
+  compactHero = false,
   deliverables,
   children,
 }: ServiceDetailProps) {
@@ -28,7 +30,11 @@ export default function ServiceDetail({
     <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
       <SiteHeader />
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-24">
+      <section
+        className={`mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 ${
+          compactHero ? "py-8 lg:py-12" : "py-14 lg:py-24"
+        }`}
+      >
         <div className="flex flex-col justify-center">
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#075ee8]">
             {eyebrow}
@@ -47,7 +53,13 @@ export default function ServiceDetail({
           </QuoteButton>
         </div>
 
-        <div className="relative min-h-[360px] overflow-hidden rounded-sm bg-[#e4ded4] shadow-[0_24px_70px_rgba(22,28,45,0.14)] sm:min-h-[520px]">
+        <div
+          className={`relative overflow-hidden rounded-sm bg-[#e4ded4] shadow-[0_24px_70px_rgba(22,28,45,0.14)] ${
+            compactHero
+              ? "min-h-[260px] sm:min-h-[360px]"
+              : "min-h-[360px] sm:min-h-[520px]"
+          }`}
+        >
           <Image
             src={image}
             alt={imageAlt}
