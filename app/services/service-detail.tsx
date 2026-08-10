@@ -8,6 +8,7 @@ type ServiceDetailProps = {
   description: string;
   image: string;
   imageAlt: string;
+  imageFit?: "cover" | "contain";
   deliverables: string[];
 };
 
@@ -17,6 +18,7 @@ export default function ServiceDetail({
   description,
   image,
   imageAlt,
+  imageFit = "cover",
   deliverables,
 }: ServiceDetailProps) {
   return (
@@ -49,7 +51,7 @@ export default function ServiceDetail({
             fill
             priority
             sizes="(min-width: 1024px) 55vw, 100vw"
-            className="object-cover"
+            className={imageFit === "contain" ? "object-contain" : "object-cover"}
           />
         </div>
       </section>
