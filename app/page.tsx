@@ -578,8 +578,7 @@ export default function Home() {
               </a>
             </div>
             <address className="max-w-2xl font-medium not-italic leading-6 text-[#8f9bae]">
-              Shed No 4, Govind Industries, Alandi Road, Charholi, Bhosari, Pune,
-              Pimpri-Chinchwad, Maharashtra 412105
+              Pune, Maharashtra
             </address>
           </div>
         </div>
