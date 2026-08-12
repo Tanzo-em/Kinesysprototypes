@@ -561,27 +561,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-[#0c1727] px-5 py-8 text-sm font-bold text-[#aeb7c8] sm:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[0.75fr_1.25fr] md:items-center">
-          <p>© 2026 Kinesysprototypes. Product design, prototyping, and manufacturing support.</p>
-          <div className="grid gap-2 md:justify-self-end md:text-right">
-            <div className="flex flex-wrap gap-x-4 gap-y-2 md:justify-end">
-              <a href="tel:+918308837348" className="transition hover:text-white">
-                +91 83088 37348
-              </a>
-              <a
-                href="mailto:ashwanikumar.tiku@gmail.com"
-                className="transition hover:text-white"
-              >
-                ashwanikumar.tiku@gmail.com
-              </a>
-            </div>
-            <address className="max-w-2xl font-medium not-italic leading-6 text-[#8f9bae]">
-              Pune, Maharashtra
-            </address>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

@@ -75,19 +75,19 @@ export default function BenchmarkingPage() {
         "Prioritized recommendations",
       ]}
       footer={
-        <section className="bg-[#06183d] px-5 py-12 sm:px-8 sm:py-14 lg:px-10">
-          <div className="mx-auto flex max-w-7xl flex-col gap-4 rounded-2xl bg-[linear-gradient(120deg,#075ee8,#089bd8)] px-6 py-6 shadow-[0_24px_70px_rgba(1,30,85,0.3)] sm:flex-row sm:items-center sm:justify-between sm:px-8 sm:py-7">
+        <section className="bg-[#06183d] px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
+          <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-2xl bg-[linear-gradient(120deg,#075ee8,#089bd8)] p-7 shadow-[0_24px_70px_rgba(1,30,85,0.3)] sm:flex-row sm:items-center sm:justify-between sm:p-10">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-100">
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-100">
                 Need a clearer competitive advantage?
               </p>
-              <p className="mt-1.5 text-xl font-black tracking-tight text-white sm:text-2xl">
+              <p className="mt-2 text-2xl font-black tracking-tight text-white sm:text-3xl">
                 Let&apos;s benchmark what matters.
               </p>
             </div>
             <QuoteButton
               service="Benchmarking"
-              className="inline-flex w-max rounded-lg bg-white px-6 py-3 text-sm font-black text-[#075ee8] transition hover:bg-blue-50"
+              className="inline-flex w-max rounded-lg bg-white px-7 py-4 text-sm font-black text-[#075ee8] transition hover:bg-blue-50"
             >
               Start a conversation
             </QuoteButton>
