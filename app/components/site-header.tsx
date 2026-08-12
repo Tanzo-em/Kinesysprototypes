@@ -17,7 +17,7 @@ const navigationLinks = [
   { title: "Industries", href: "/#industries" },
   { title: "Materials", href: "/#materials" },
   { title: "Packages", href: "/#showcase" },
-  { title: "Contact", href: "/#contact" },
+  { title: "Contact", href: "/contact" },
 ];
 
 export default function SiteHeader() {
@@ -95,7 +95,7 @@ export default function SiteHeader() {
               Get Quote
             </button>
             <Link
-              href="/#contact"
+              href="/contact"
               aria-label="Contact Kinesysprototypes"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#081d46] text-lg font-black text-white"
             >

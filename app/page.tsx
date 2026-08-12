@@ -574,7 +574,7 @@ export default function Home() {
             <a href="#materials" className="hover:text-white">
               Materials
             </a>
-            <a href="#contact" className="hover:text-white">
+            <a href="/contact" className="hover:text-white">
               Contact
             </a>
           </div>
