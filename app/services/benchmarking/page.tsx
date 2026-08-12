@@ -12,8 +12,8 @@ export default function BenchmarkingPage() {
       title="Benchmarking"
       eyebrow="Learn from the market"
       description="We compare your product with competitors and relevant industry standards to reveal performance gaps, design strengths, user-experience opportunities, and practical directions for improvement."
-      image="/figma/web-mockup.jpg"
-      imageAlt="Product interface used for competitive benchmarking"
+      image="/services/benchmarking-3d-printing.jpg"
+      imageAlt="3D printer producing a prototype for product benchmarking"
       deliverables={[
         "Competitor landscape review",
         "Feature comparison",
