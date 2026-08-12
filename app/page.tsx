@@ -206,7 +206,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="expertise" className="bg-[linear-gradient(180deg,#ffffff_0%,#f3f7ff_100%)] py-16 sm:py-24">
+      <section id="expertise" className="bg-[linear-gradient(180deg,#fffdf9_0%,#f4f1eb_100%)] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
             <div>
@@ -284,7 +284,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="bg-[#edf3ff] py-16 sm:py-24">
+      <section id="services" className="bg-[#eef1f3] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-4xl font-black tracking-tight sm:text-5xl">
             What <span className="text-[#075ee8]">We Do</span>
@@ -323,7 +323,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="industries" className="bg-white py-16 sm:py-24">
+      <section id="industries" className="bg-[#f2faf9] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
@@ -359,7 +359,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#edf3ff] py-16 sm:py-24">
+      <section className="bg-[#f1f0f7] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
@@ -399,14 +399,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="overflow-hidden bg-white py-14">
+      <section className="overflow-hidden bg-[#fffaf2] py-14">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-4xl font-black tracking-tight">
             Trusted <span className="text-[#075ee8]">By</span>
           </h2>
         </div>
 
-        <div className="relative mt-10 overflow-hidden border-y border-[#dce8ff] bg-[#f5f8ff] py-5 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div className="relative mt-10 overflow-hidden border-y border-[#e7ddd0] bg-[#f7f1e8] py-5 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
           <div className="trusted-marquee flex w-max">
             {[0, 1].map((copy) => (
               <div
@@ -446,7 +446,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="materials" className="bg-[#edf3ff] py-16 sm:py-24">
+      <section id="materials" className="bg-[#eef5f1] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
@@ -494,7 +494,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="showcase" className="bg-white py-16 sm:py-24">
+      <section id="showcase" className="bg-[#f7f5f2] py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <h2 className="section-title text-4xl font-black tracking-tight sm:text-5xl">
