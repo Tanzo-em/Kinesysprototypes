@@ -13,7 +13,7 @@ const serviceLinks = [
 
 const navigationLinks = [
   { title: "Expertise", href: "/#expertise" },
-  { title: "IMAGINE", href: "/#imagine" },
+  { title: "Imagine", href: "/#imagine" },
   { title: "Industries", href: "/#industries" },
   { title: "Materials", href: "/#materials" },
   { title: "Packages", href: "/#showcase" },
