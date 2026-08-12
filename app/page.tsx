@@ -377,7 +377,7 @@ export default function Home() {
                 className="group relative overflow-hidden rounded-2xl border border-white/80 bg-white p-6 shadow-[0_12px_34px_rgba(7,54,130,0.07)] transition duration-300 hover:-translate-y-1.5 hover:border-[#b8cff8] hover:shadow-[0_24px_60px_rgba(7,94,232,0.14)]"
               >
                 <div className="mb-7 flex items-center justify-between">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e2ecff] text-lg font-black text-[#075ee8] transition group-hover:bg-[#075ee8] group-hover:text-white">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eee9fb] text-lg font-black text-[#6d4bc3] transition group-hover:bg-[#6d4bc3] group-hover:text-white">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="h-px flex-1 bg-[linear-gradient(90deg,#b8cff8,transparent)]" />
@@ -388,7 +388,7 @@ export default function Home() {
                 <p className="mt-4 text-sm font-medium leading-6 text-[#606a7a]">
                   {item.copy}
                 </p>
-                <div className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-[#075ee8] transition-transform duration-300 group-hover:scale-x-100" />
+                <div className="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-[#6d4bc3] transition-transform duration-300 group-hover:scale-x-100" />
               </article>
             ))}
           </div>
@@ -467,7 +467,7 @@ export default function Home() {
                   <h3 className="text-2xl font-black text-[#081d46] transition group-hover:text-[#075ee8]">
                     {group.process}
                   </h3>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#075ee8] text-sm font-black text-white">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#168477] text-sm font-black text-white">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
