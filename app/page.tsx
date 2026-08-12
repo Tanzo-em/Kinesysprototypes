@@ -131,7 +131,7 @@ const materials = [
 const showcase = [
   {
     title: "Prototype Sprint",
-    image: "/hero/printer-in-production.png",
+    image: "/showcase/prototype-sprint.jpg",
     price: "CAD, print, finish, and review",
   },
   {
