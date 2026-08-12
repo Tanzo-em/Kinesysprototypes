@@ -47,12 +47,20 @@ export default function ContactPage() {
                   Contact person
                 </p>
                 <h2 className="mt-3 text-2xl font-black">Ashwani Kumar</h2>
-                <a
-                  href="tel:+918308837348"
-                  className="mt-2 inline-flex text-lg font-bold text-[#075ee8] transition hover:text-[#064dbd]"
-                >
-                  +91 83088 37348
-                </a>
+                <div className="mt-2 grid gap-1.5">
+                  <a
+                    href="tel:+918308837348"
+                    className="w-fit text-lg font-bold text-[#075ee8] transition hover:text-[#064dbd]"
+                  >
+                    +91 83088 37348
+                  </a>
+                  <a
+                    href="mailto:ashwanikumar.tiku@gmail.com"
+                    className="w-fit break-all text-base font-bold text-[#075ee8] transition hover:text-[#064dbd]"
+                  >
+                    ashwanikumar.tiku@gmail.com
+                  </a>
+                </div>
               </div>
 
               <div className="pt-8">
