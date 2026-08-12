@@ -323,36 +323,35 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="industries" className="bg-[#f2faf9] py-16 sm:py-24">
+      <section id="industries" className="bg-[#f4f8f7] py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5278a8]">
               Where we create impact
             </p>
-            <h2 className="section-title mt-3 text-4xl font-black tracking-tight sm:text-5xl">
+            <h2 className="section-title mt-2 text-3xl font-black tracking-tight sm:text-4xl">
               Industries <span className="text-[#075ee8]">& Applications</span>
             </h2>
-            <p className="mt-5 text-base font-medium leading-7 text-[#5f6675]">
+            <p className="mt-3 text-sm font-medium leading-6 text-[#657083]">
               Cross-industry design and manufacturing support for products that
               need thoughtful engineering, reliable performance, and clear execution.
             </p>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="mt-8 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {industries.map((industry, index) => (
               <div
                 key={industry}
-                className="group relative overflow-hidden rounded-2xl border border-[#d6e3fa] bg-[linear-gradient(135deg,#ffffff_0%,#f3f7ff_100%)] p-5 shadow-[0_10px_30px_rgba(7,54,130,0.05)] transition duration-300 hover:-translate-y-1 hover:border-[#8ab4ff] hover:shadow-[0_20px_45px_rgba(7,94,232,0.12)]"
+                className="group rounded-xl border border-[#dce5e3] bg-white/70 px-4 py-3 transition duration-300 hover:border-[#aebfce] hover:bg-white"
               >
-                <div className="flex items-center gap-4">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#e2ecff] text-sm font-black text-[#075ee8] transition group-hover:bg-[#075ee8] group-hover:text-white">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#e7eff1] text-[11px] font-black text-[#426a82] transition group-hover:bg-[#dbe9ee]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-lg font-black text-[#081d46] transition group-hover:text-[#075ee8]">
+                  <span className="text-sm font-bold text-[#243858] transition group-hover:text-[#075ee8]">
                     {industry}
                   </span>
                 </div>
-                <span className="absolute -bottom-8 -right-8 h-20 w-20 rounded-full bg-[#dce8ff]/70 transition duration-300 group-hover:scale-150" />
               </div>
             ))}
           </div>
