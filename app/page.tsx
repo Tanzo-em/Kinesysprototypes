@@ -131,22 +131,22 @@ const materials = [
 const showcase = [
   {
     title: "Prototype Sprint",
-    image: "/figma/app-flow.jpg",
+    image: "/hero/printer-in-production.png",
     price: "CAD, print, finish, and review",
   },
   {
     title: "Manufacturing Pilot",
-    image: "/figma/web-mockup.jpg",
+    image: "/hero/industrial-printer.png",
     price: "Short-run parts and DFM checks",
   },
   {
     title: "Material Selection",
-    image: "/figma/blue-illustration.jpg",
+    image: "/hero/printed-components.png",
     price: "Process and material recommendation",
   },
   {
     title: "Production Support",
-    image: "/figma/developer.jpg",
+    image: "/hero/manufactured-parts.png",
     price: "Tooling, fabrication, and finishing",
   },
 ];
