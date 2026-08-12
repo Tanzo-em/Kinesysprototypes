@@ -32,6 +32,29 @@ const htmlEntities: Record<string, string> = {
 const escapeHtml = (input: string) =>
   input.replace(/[&<>'"]/g, (character) => htmlEntities[character] || character);
 
+type ResendError = {
+  message?: string;
+  name?: string;
+};
+
+const deliveryErrorMessage = (status: number, error: ResendError) => {
+  const providerMessage = error.message?.toLowerCase() || "";
+
+  if (providerMessage.includes("testing emails") || providerMessage.includes("verify a domain")) {
+    return "The email sender is not verified. Please verify your sending domain in Resend and try again.";
+  }
+
+  if (providerMessage.includes("api key") || status === 401) {
+    return "The email service API key is invalid. Please update RESEND_API_KEY in the deployment settings.";
+  }
+
+  if (status === 429) {
+    return "The email service is temporarily rate limited. Please wait a moment and try again.";
+  }
+
+  return "We could not send your request right now. Please try again or email ashwanikumar.tiku@gmail.com directly.";
+};
+
 export async function POST(request: Request) {
   try {
     const formData = await request.formData();
@@ -99,6 +122,7 @@ export async function POST(request: Request) {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
+        "User-Agent": "Kinesys-Prototypes-Website/1.0",
       },
       body: JSON.stringify({
         from: fromEmail,
@@ -121,9 +145,18 @@ export async function POST(request: Request) {
     });
 
     if (!response.ok) {
-      console.error("Resend quote email failed:", response.status, await response.text());
+      const responseBody = await response.text();
+      let resendError: ResendError = {};
+
+      try {
+        resendError = JSON.parse(responseBody) as ResendError;
+      } catch {
+        resendError = { message: responseBody };
+      }
+
+      console.error("Resend quote email failed:", response.status, resendError);
       return NextResponse.json(
-        { message: "We could not send your request right now. Please try again." },
+        { message: deliveryErrorMessage(response.status, resendError) },
         { status: 502 },
       );
     }
