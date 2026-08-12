@@ -146,7 +146,7 @@ const showcase = [
   },
   {
     title: "Production Support",
-    image: "/hero/manufactured-parts.png",
+    image: "/showcase/production-support.avif",
     price: "Tooling, fabrication, and finishing",
   },
 ];
