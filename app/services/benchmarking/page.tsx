@@ -75,7 +75,7 @@ export default function BenchmarkingPage() {
         "Prioritized recommendations",
       ]}
       footer={
-        <section className="bg-[#06183d] px-5 pb-16 sm:px-8 sm:pb-24 lg:px-10">
+        <section className="bg-[#06183d] px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
           <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-2xl bg-[linear-gradient(120deg,#075ee8,#089bd8)] p-7 shadow-[0_24px_70px_rgba(1,30,85,0.3)] sm:flex-row sm:items-center sm:justify-between sm:p-10">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-100">
