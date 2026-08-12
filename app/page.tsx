@@ -152,8 +152,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
       <SiteHeader />
 
-      <section className="w-full bg-black pb-7 sm:pb-12 lg:pb-16">
-        <div className="relative min-h-[500px] w-full overflow-hidden bg-black shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px]">
+      <section className="w-full bg-black">
+        <div className="relative min-h-[460px] w-full overflow-hidden bg-black shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[620px]">
           {heroSlides.map((slide, index) => (
             <div
               key={slide.title}
@@ -175,7 +175,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,18,0.72)_0%,rgba(8,12,18,0.38)_36%,transparent_62%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,12,18,0.45),transparent_45%)]" />
 
-          <div className="relative z-10 flex min-h-[500px] max-w-2xl flex-col justify-center px-5 py-10 sm:min-h-[680px] sm:px-12 sm:py-16 lg:px-16">
+          <div className="relative z-10 flex min-h-[460px] max-w-2xl flex-col justify-center px-5 py-10 sm:min-h-[620px] sm:px-12 sm:py-16 lg:px-16">
             <p className="mb-5 text-sm font-black uppercase tracking-[0.2em] text-[#78a9ff]">
               Home
             </p>
