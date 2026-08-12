@@ -37,28 +37,8 @@ type ResendError = {
   name?: string;
 };
 
-const deliveryErrorMessage = (status: number, error: ResendError) => {
-  const originalMessage = error.message?.trim() || "";
-  const providerMessage = originalMessage.toLowerCase();
-
-  if (providerMessage.includes("testing emails") || providerMessage.includes("verify a domain")) {
-    return "The email sender is not verified. Please verify your sending domain in Resend and try again.";
-  }
-
-  if (providerMessage.includes("api key") || status === 401) {
-    return "The email service API key is invalid. Please update RESEND_API_KEY in the deployment settings.";
-  }
-
-  if (status === 429) {
-    return "The email service is temporarily rate limited. Please wait a moment and try again.";
-  }
-
-  if (originalMessage) {
-    return `Email service error (${status}): ${originalMessage}`;
-  }
-
-  return `Email service error (${status}). Please check the Resend deployment configuration or email ashwanikumar.tiku@gmail.com directly.`;
-};
+const DELIVERY_ERROR_MESSAGE =
+  "Mail failed. Please try again or contact us at ashwanikumar.tiku@gmail.com.";
 
 export async function POST(request: Request) {
   try {
@@ -109,7 +89,7 @@ export async function POST(request: Request) {
     if (!apiKey || !fromEmail) {
       console.error("Quote email is not configured: RESEND_API_KEY or QUOTE_FROM_EMAIL is missing.");
       return NextResponse.json(
-        { message: "Email delivery is not configured yet. Please contact us directly." },
+        { message: DELIVERY_ERROR_MESSAGE },
         { status: 503 },
       );
     }
@@ -161,7 +141,7 @@ export async function POST(request: Request) {
 
       console.error("Resend quote email failed:", response.status, resendError);
       return NextResponse.json(
-        { message: deliveryErrorMessage(response.status, resendError) },
+        { message: DELIVERY_ERROR_MESSAGE },
         { status: 502 },
       );
     }
@@ -170,7 +150,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Quote request failed:", error);
     return NextResponse.json(
-      { message: "We could not process your request right now. Please try again." },
+      { message: DELIVERY_ERROR_MESSAGE },
       { status: 500 },
     );
   }
