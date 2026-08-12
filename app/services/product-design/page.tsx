@@ -4,8 +4,15 @@ import { QuoteButton } from "../../components/quote-modal";
 import ServiceDetail from "../service-detail";
 
 export const metadata: Metadata = {
-  title: "Product Design | Kinesysprototypes",
-  description: "Human-centered product design services from concept to production-ready definition.",
+  title: "Product Design Services in Pune",
+  description: "Industrial product design in Pune, from concept sketches and CMF development to CAD, Class-A surfacing, prototyping, and production-ready design.",
+  alternates: { canonical: "/services/product-design" },
+  openGraph: {
+    title: "Product Design Services in Pune",
+    description: "Transform product ideas into production-ready designs with concept development, CAD, surfacing, and prototyping support.",
+    url: "/services/product-design",
+    images: ["/figma/car-sketch.jpg"],
+  },
 };
 
 export default function ProductDesignPage() {

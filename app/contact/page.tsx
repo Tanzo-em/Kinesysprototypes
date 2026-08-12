@@ -9,9 +9,15 @@ const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(address)}&out
 const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
 
 export const metadata: Metadata = {
-  title: "Contact Us | Kinesysprototypes",
+  title: "Contact Our Pune Product Development Studio",
   description:
     "Contact Kinesysprototypes in Bhosari, Pune for product design, prototyping, benchmarking, and visualization services.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact Kinesys Prototypes in Pune",
+    description: "Visit our Bhosari, Pune studio or send your product design, prototyping, and manufacturing requirements.",
+    url: "/contact",
+  },
 };
 
 export default function ContactPage() {

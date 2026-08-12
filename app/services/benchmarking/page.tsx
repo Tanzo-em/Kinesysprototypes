@@ -4,8 +4,15 @@ import { QuoteButton } from "../../components/quote-modal";
 import ServiceDetail from "../service-detail";
 
 export const metadata: Metadata = {
-  title: "Benchmarking | Kinesysprototypes",
-  description: "Product and competitor benchmarking that reveals strengths, gaps, and opportunities.",
+  title: "Product Benchmarking Services in Pune",
+  description: "Physical product and competitor benchmarking in Pune, including package comparison, teardown analysis, component evaluation, and actionable recommendations.",
+  alternates: { canonical: "/services/benchmarking" },
+  openGraph: {
+    title: "Product Benchmarking Services in Pune",
+    description: "Turn competitor teardown, physical inspection, and component analysis into measurable product improvements.",
+    url: "/services/benchmarking",
+    images: ["/services/benchmarking-3d-printing.jpg"],
+  },
 };
 
 export default function BenchmarkingPage() {
