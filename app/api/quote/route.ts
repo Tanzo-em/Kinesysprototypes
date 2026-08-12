@@ -38,7 +38,8 @@ type ResendError = {
 };
 
 const deliveryErrorMessage = (status: number, error: ResendError) => {
-  const providerMessage = error.message?.toLowerCase() || "";
+  const originalMessage = error.message?.trim() || "";
+  const providerMessage = originalMessage.toLowerCase();
 
   if (providerMessage.includes("testing emails") || providerMessage.includes("verify a domain")) {
     return "The email sender is not verified. Please verify your sending domain in Resend and try again.";
@@ -52,7 +53,11 @@ const deliveryErrorMessage = (status: number, error: ResendError) => {
     return "The email service is temporarily rate limited. Please wait a moment and try again.";
   }
 
-  return "We could not send your request right now. Please try again or email ashwanikumar.tiku@gmail.com directly.";
+  if (originalMessage) {
+    return `Email service error (${status}): ${originalMessage}`;
+  }
+
+  return `Email service error (${status}). Please check the Resend deployment configuration or email ashwanikumar.tiku@gmail.com directly.`;
 };
 
 export async function POST(request: Request) {
