@@ -36,7 +36,7 @@ const services = [
   {
     title: "Benchmarking",
     href: "/services/benchmarking",
-    image: "/figma/blue-illustration.jpg",
+    image: "/services/benchmarking-3d-printing.jpg",
     copy: "We analyze your product against competitors and industry standards to identify strengths, weaknesses, and opportunities for improvement.",
   },
   {
