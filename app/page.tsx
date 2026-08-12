@@ -152,8 +152,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
       <SiteHeader />
 
-      <section className="bg-[linear-gradient(180deg,#edf3ff_0%,#ffffff_100%)] px-3 pb-7 pt-3 sm:px-8 sm:pb-12 sm:pt-6 lg:px-10 lg:pb-16 lg:pt-8">
-        <div className="relative mx-auto min-h-[500px] max-w-7xl overflow-hidden rounded-[1rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px] sm:rounded-[2rem]">
+      <section className="w-full bg-black pb-7 sm:pb-12 lg:pb-16">
+        <div className="relative min-h-[500px] w-full overflow-hidden bg-black shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px]">
           {heroSlides.map((slide, index) => (
             <div
               key={slide.title}
@@ -165,13 +165,14 @@ export default function Home() {
                 alt={slide.title}
                 fill
                 priority={index === 0}
-                sizes="(min-width: 1280px) 1280px, 100vw"
-                className="object-cover object-center"
+                sizes="100vw"
+                className="object-contain object-center"
               />
             </div>
           ))}
 
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,18,0.9)_0%,rgba(8,12,18,0.7)_42%,rgba(8,12,18,0.2)_75%,rgba(8,12,18,0.1)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.88)_0%,rgba(0,0,0,0.42)_18%,transparent_38%,transparent_72%,rgba(0,0,0,0.48)_88%,rgba(0,0,0,0.88)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,18,0.72)_0%,rgba(8,12,18,0.38)_36%,transparent_62%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,12,18,0.45),transparent_45%)]" />
 
           <div className="relative z-10 flex min-h-[500px] max-w-2xl flex-col justify-center px-5 py-10 sm:min-h-[680px] sm:px-12 sm:py-16 lg:px-16">
