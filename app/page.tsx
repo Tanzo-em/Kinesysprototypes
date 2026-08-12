@@ -136,7 +136,7 @@ const showcase = [
   },
   {
     title: "Manufacturing Pilot",
-    image: "/hero/industrial-printer.png",
+    image: "/showcase/manufacturing-pilot.jpg",
     price: "Short-run parts and DFM checks",
   },
   {
