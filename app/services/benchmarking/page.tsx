@@ -75,7 +75,7 @@ export default function BenchmarkingPage() {
         "Prioritized recommendations",
       ]}
       footer={
-        <section className="bg-[#06183d] px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
+        <section className="bg-[#06183d] px-5 py-12 sm:px-8 sm:py-20 lg:px-10">
           <div className="mx-auto flex max-w-7xl flex-col gap-5 rounded-2xl bg-[linear-gradient(120deg,#075ee8,#089bd8)] p-7 shadow-[0_24px_70px_rgba(1,30,85,0.3)] sm:flex-row sm:items-center sm:justify-between sm:p-10">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-blue-100">
@@ -95,9 +95,9 @@ export default function BenchmarkingPage() {
         </section>
       }
     >
-      <section className="overflow-hidden bg-[linear-gradient(145deg,#06183d_0%,#08285f_52%,#063d85_100%)] py-16 text-white sm:py-24">
+      <section className="overflow-hidden bg-[linear-gradient(145deg,#06183d_0%,#08285f_52%,#063d85_100%)] py-12 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="grid gap-8 border-b border-cyan-200/20 pb-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+          <div className="grid gap-5 border-b border-cyan-200/20 pb-8 sm:gap-8 sm:pb-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.2em] text-[#5ed7ff]">
                 Evidence before decisions
@@ -113,14 +113,14 @@ export default function BenchmarkingPage() {
             </p>
           </div>
 
-          <div className="mt-12 space-y-8 sm:mt-16 sm:space-y-12">
+          <div className="mt-8 space-y-6 sm:mt-16 sm:space-y-12">
             {benchmarkingStages.map((stage, index) => (
               <article
                 key={stage.number}
                 className="grid overflow-hidden rounded-2xl border border-cyan-100/15 bg-[#0b2d66]/80 shadow-[0_26px_85px_rgba(0,8,30,0.34)] lg:grid-cols-2 lg:items-stretch"
               >
                 <div
-                  className={`relative min-h-[280px] bg-[#dcecff] sm:min-h-[400px] ${
+                  className={`relative min-h-[230px] bg-[#dcecff] sm:min-h-[400px] ${
                     index % 2 === 1 ? "lg:order-2" : ""
                   }`}
                 >
@@ -132,7 +132,7 @@ export default function BenchmarkingPage() {
                     className={stage.fit === "contain" ? "object-contain" : "object-cover"}
                   />
                 </div>
-                <div className="flex min-h-[290px] flex-col justify-center p-7 sm:p-12 lg:p-16">
+                <div className="flex min-h-[240px] flex-col justify-center p-6 sm:min-h-[290px] sm:p-12 lg:p-16">
                   <span className="font-mono text-sm font-bold tracking-[0.2em] text-[#5ed7ff]">
                     STAGE {stage.number}
                   </span>

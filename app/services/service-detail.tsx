@@ -35,18 +35,18 @@ export default function ServiceDetail({
       <SiteHeader />
 
       <section
-        className={`mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 ${
-          compactHero ? "py-8 lg:py-12" : "py-14 lg:py-24"
+        className={`mx-auto grid max-w-7xl gap-7 px-5 sm:gap-10 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 ${
+          compactHero ? "py-7 lg:py-12" : "py-10 lg:py-24"
         }`}
       >
         <div className="flex flex-col justify-center">
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#075ee8]">
             {eyebrow}
           </p>
-          <h1 className="mt-4 text-4xl font-black tracking-[-0.04em] sm:text-6xl">
+          <h1 className="mt-3 text-4xl font-black tracking-[-0.04em] sm:mt-4 sm:text-6xl">
             {title}
           </h1>
-          <p className="mt-6 max-w-xl text-lg font-medium leading-8 text-[#5f6675]">
+          <p className="mt-4 max-w-xl text-base font-medium leading-7 text-[#5f6675] sm:mt-6 sm:text-lg sm:leading-8">
             {description}
           </p>
           <QuoteButton
@@ -60,8 +60,8 @@ export default function ServiceDetail({
         <div
           className={`relative overflow-hidden rounded-sm bg-[#e4ded4] shadow-[0_24px_70px_rgba(22,28,45,0.14)] ${
             compactHero
-              ? "min-h-[260px] sm:min-h-[360px]"
-              : "min-h-[360px] sm:min-h-[520px]"
+              ? "min-h-[220px] sm:min-h-[360px]"
+              : "min-h-[280px] sm:min-h-[520px]"
           }`}
         >
           <Image

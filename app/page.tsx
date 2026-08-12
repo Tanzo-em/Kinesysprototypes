@@ -152,8 +152,8 @@ export default function Home() {
     <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
       <SiteHeader />
 
-      <section className="bg-[linear-gradient(180deg,#edf3ff_0%,#ffffff_100%)] px-5 pb-8 pt-4 sm:px-8 sm:pb-12 sm:pt-6 lg:px-10 lg:pb-16 lg:pt-8">
-        <div className="relative mx-auto min-h-[560px] max-w-7xl overflow-hidden rounded-[1.25rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px] sm:rounded-[2rem]">
+      <section className="bg-[linear-gradient(180deg,#edf3ff_0%,#ffffff_100%)] px-3 pb-7 pt-3 sm:px-8 sm:pb-12 sm:pt-6 lg:px-10 lg:pb-16 lg:pt-8">
+        <div className="relative mx-auto min-h-[500px] max-w-7xl overflow-hidden rounded-[1rem] bg-[#20242a] shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[680px] sm:rounded-[2rem]">
           {heroSlides.map((slide, index) => (
             <div
               key={slide.title}
@@ -174,11 +174,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,18,0.9)_0%,rgba(8,12,18,0.7)_42%,rgba(8,12,18,0.2)_75%,rgba(8,12,18,0.1)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(8,12,18,0.45),transparent_45%)]" />
 
-          <div className="relative z-10 flex min-h-[560px] max-w-2xl flex-col justify-center px-6 py-12 sm:min-h-[680px] sm:px-12 sm:py-16 lg:px-16">
+          <div className="relative z-10 flex min-h-[500px] max-w-2xl flex-col justify-center px-5 py-10 sm:min-h-[680px] sm:px-12 sm:py-16 lg:px-16">
             <p className="mb-5 text-sm font-black uppercase tracking-[0.2em] text-[#78a9ff]">
               Home
             </p>
-            <h1 className="section-title max-w-xl text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="section-title max-w-xl text-[2.15rem] font-black leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Transform your ideas into reality
             </h1>
             <p className="mt-5 max-w-xl text-base font-semibold leading-7 text-white/85 sm:mt-6 sm:text-xl sm:leading-8">
@@ -202,7 +202,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="expertise" className="bg-[linear-gradient(180deg,#fffdf9_0%,#f4f1eb_100%)] py-16 sm:py-24">
+      <section id="expertise" className="bg-[linear-gradient(180deg,#fffdf9_0%,#f4f1eb_100%)] py-12 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
             <div>
@@ -274,13 +274,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="imagine" className="bg-white py-16 sm:py-24">
+      <section id="imagine" className="bg-white py-12 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <ImagineProcess />
         </div>
       </section>
 
-      <section id="services" className="bg-[#eef1f3] py-16 sm:py-24">
+      <section id="services" className="bg-[#eef1f3] py-12 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <h2 className="section-title text-center text-4xl font-black tracking-tight sm:text-5xl">
             What <span className="text-[#075ee8]">We Do</span>
@@ -319,7 +319,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="industries" className="bg-[#f2faf9] py-16 sm:py-24">
+      <section id="industries" className="bg-[#f2faf9] py-12 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
@@ -355,7 +355,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f1f0f7] py-16 sm:py-24">
+      <section className="bg-[#f1f0f7] py-12 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
@@ -442,7 +442,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="materials" className="bg-[#eef5f1] py-16 sm:py-24">
+      <section id="materials" className="bg-[#eef5f1] py-12 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
@@ -490,7 +490,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="showcase" className="bg-[#f7f5f2] py-16 sm:py-24">
+      <section id="showcase" className="bg-[#f7f5f2] py-12 sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <h2 className="section-title text-4xl font-black tracking-tight sm:text-5xl">

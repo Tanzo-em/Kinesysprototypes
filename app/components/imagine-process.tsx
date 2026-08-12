@@ -156,7 +156,7 @@ export default function ImagineProcess() {
   const activeStage = stages[activeIndex];
 
   return (
-    <div className="relative py-8">
+    <div className="relative py-3 sm:py-8">
       <div className="flex flex-col justify-center">
         <div className="text-center">
           <p className="text-xs font-black uppercase tracking-[0.24em] text-[#075ee8]">
@@ -170,12 +170,12 @@ export default function ImagineProcess() {
           </h2>
         </div>
 
-        <div className="mt-8 grid items-center gap-8 lg:grid-cols-[1.45fr_0.55fr]">
+        <div className="mt-6 grid items-center gap-6 sm:mt-8 sm:gap-8 lg:grid-cols-[1.45fr_0.55fr]">
           <div
             ref={graphicRef}
             tabIndex={0}
             aria-label="Scroll over the infinity diagram to move through stages 1 to 7"
-            className="relative mx-auto aspect-[2.1] w-full max-w-[820px] cursor-ns-resize outline-none focus-visible:ring-4 focus-visible:ring-[#b8cff8]"
+            className="relative mx-auto aspect-[2.1] w-[calc(100%+1rem)] max-w-[820px] -translate-x-2 cursor-ns-resize outline-none focus-visible:ring-4 focus-visible:ring-[#b8cff8] sm:w-full sm:translate-x-0"
           >
             <svg
               viewBox="0 0 820 390"
@@ -226,7 +226,7 @@ export default function ImagineProcess() {
           <article
             key={activeStage.number}
             aria-live="polite"
-            className="rounded-2xl border border-[#cbdcfb] bg-white p-7 shadow-[0_20px_60px_rgba(7,54,130,0.12)] sm:p-9"
+            className="rounded-2xl border border-[#cbdcfb] bg-white p-5 shadow-[0_20px_60px_rgba(7,54,130,0.12)] sm:p-9"
           >
             <p className="text-sm font-black uppercase tracking-[0.2em] text-[#075ee8]">
               Stage {String(activeStage.number).padStart(2, "0")}

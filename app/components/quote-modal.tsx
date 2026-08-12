@@ -140,7 +140,7 @@ export default function QuoteProvider({ children }: { children: ReactNode }) {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#081d46]/70 p-3 backdrop-blur-sm sm:p-6"
+          className="fixed inset-0 z-[100] flex items-end justify-center bg-[#081d46]/70 p-0 backdrop-blur-sm sm:items-center sm:p-6"
           onMouseDown={(event) => {
             if (event.target === event.currentTarget) closeQuote();
           }}
@@ -149,9 +149,9 @@ export default function QuoteProvider({ children }: { children: ReactNode }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="quote-title"
-            className="relative max-h-[calc(100dvh-1.5rem)] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white shadow-[0_30px_100px_rgba(3,18,48,0.35)] sm:max-h-[calc(100dvh-3rem)] sm:rounded-3xl"
+            className="relative max-h-[96dvh] w-full max-w-3xl overflow-y-auto rounded-t-2xl bg-white shadow-[0_30px_100px_rgba(3,18,48,0.35)] sm:max-h-[calc(100dvh-3rem)] sm:rounded-3xl"
           >
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#dce8ff] bg-white/95 px-5 py-5 backdrop-blur sm:px-8">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-[#dce8ff] bg-white/95 px-4 py-4 backdrop-blur sm:px-8 sm:py-5">
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.2em] text-[#075ee8]">
                   Tell us about your project
@@ -171,7 +171,7 @@ export default function QuoteProvider({ children }: { children: ReactNode }) {
               </button>
             </div>
 
-            <form ref={formRef} onSubmit={handleSubmit} className="grid gap-6 px-5 py-6 sm:px-8 sm:py-8">
+            <form ref={formRef} onSubmit={handleSubmit} className="grid gap-4 px-4 py-5 sm:gap-6 sm:px-8 sm:py-8">
               <input
                 type="text"
                 name="website"

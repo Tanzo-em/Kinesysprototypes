@@ -82,9 +82,9 @@ export default function ProductDesignPage() {
         </section>
       }
     >
-      <section className="overflow-hidden bg-[#071a3d] py-16 text-white sm:py-24">
+      <section className="overflow-hidden bg-[#071a3d] py-12 text-white sm:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="grid gap-8 border-b border-white/15 pb-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div className="grid gap-5 border-b border-white/15 pb-8 sm:gap-8 sm:pb-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.2em] text-[#65a6ff]">
                 From first line to final surface
@@ -99,14 +99,14 @@ export default function ProductDesignPage() {
             </p>
           </div>
 
-          <div className="mt-12 space-y-8 sm:mt-16 sm:space-y-12">
+          <div className="mt-8 space-y-6 sm:mt-16 sm:space-y-12">
             {processSteps.map((step, index) => (
               <article
                 key={step.number}
                 className="grid overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] shadow-[0_24px_80px_rgba(0,0,0,0.22)] lg:grid-cols-2 lg:items-stretch"
               >
                 <div
-                  className={`relative min-h-[260px] bg-white sm:min-h-[380px] ${
+                  className={`relative min-h-[210px] bg-white sm:min-h-[380px] ${
                     index % 2 === 1 ? "lg:order-2" : ""
                   }`}
                 >
@@ -118,7 +118,7 @@ export default function ProductDesignPage() {
                     className="object-contain"
                   />
                 </div>
-                <div className="flex min-h-[300px] flex-col justify-center p-7 sm:p-12 lg:p-16">
+                <div className="flex min-h-[240px] flex-col justify-center p-6 sm:min-h-[300px] sm:p-12 lg:p-16">
                   <span className="font-mono text-sm font-bold tracking-[0.2em] text-[#65a6ff]">
                     STEP {step.number}
                   </span>

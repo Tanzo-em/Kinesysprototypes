@@ -5,7 +5,7 @@ export default function SiteFooter() {
         <p>
           © 2026 Kinesysprototypes. Product design, prototyping, and manufacturing support.
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 md:justify-end">
+        <div className="grid items-center justify-center gap-1 sm:flex sm:flex-wrap sm:gap-x-4 md:justify-end">
           <a href="tel:+918308837348" className="transition hover:text-white">
             +91 83088 37348
           </a>

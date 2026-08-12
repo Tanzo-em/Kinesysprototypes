@@ -19,7 +19,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#f5f8ff] text-[#081d46]">
       <SiteHeader />
 
-      <section className="relative overflow-hidden px-5 py-14 sm:px-8 sm:py-20 lg:px-10">
+      <section className="relative overflow-hidden px-5 py-10 sm:px-8 sm:py-20 lg:px-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_10%,rgba(7,94,232,0.15),transparent_32%),linear-gradient(135deg,#f8fbff_0%,#eaf2ff_100%)]" />
         <div className="relative mx-auto max-w-7xl">
           <p className="text-sm font-black uppercase tracking-[0.2em] text-[#075ee8]">
@@ -28,7 +28,7 @@ export default function ContactPage() {
           <h1 className="mt-4 max-w-3xl text-4xl font-black tracking-[-0.04em] sm:text-6xl">
             Let&apos;s build your next idea.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg font-medium leading-8 text-[#5f6675]">
+          <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-[#5f6675] sm:mt-5 sm:text-lg sm:leading-8">
             Visit our Pune facility, speak directly with our team, or send your project brief for a fast estimate.
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
 
       <section className="px-5 pb-16 sm:px-8 sm:pb-24 lg:px-10">
         <div className="mx-auto grid max-w-7xl overflow-hidden rounded-2xl bg-white shadow-[0_28px_80px_rgba(7,54,130,0.14)] lg:grid-cols-[0.82fr_1.18fr]">
-          <div className="flex flex-col justify-between p-7 sm:p-10 lg:p-12">
+          <div className="flex flex-col justify-between p-5 sm:p-10 lg:p-12">
             <div>
               <span className="inline-flex rounded-full bg-[#e8f1ff] px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#075ee8]">
                 Pune Studio
@@ -90,13 +90,13 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="min-h-[390px] bg-[#dce8ff] lg:min-h-[590px]">
+          <div className="min-h-[300px] bg-[#dce8ff] sm:min-h-[390px] lg:min-h-[590px]">
             <iframe
               src={mapUrl}
               title="Kinesysprototypes location on Google Maps"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-full min-h-[390px] w-full border-0 lg:min-h-[590px]"
+              className="h-full min-h-[300px] w-full border-0 sm:min-h-[390px] lg:min-h-[590px]"
               allowFullScreen
             />
           </div>
