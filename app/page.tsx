@@ -50,16 +50,12 @@ const services = [
 const industries = [
   "Aerospace",
   "Architecture",
-  "Art & Design",
   "Automotive",
-  "Cinema & Entertainment",
   "Consumer Products",
   "Defence",
   "Electronics",
-  "Fashion & Jewellery",
   "Medical Technology",
   "Robotics & Automation",
-  "Toys",
 ];
 
 const stats = [
