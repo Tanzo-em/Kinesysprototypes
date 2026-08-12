@@ -565,7 +565,6 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[0.75fr_1.25fr] md:items-center">
           <p>© 2026 Kinesysprototypes. Product design, prototyping, and manufacturing support.</p>
           <div className="grid gap-2 md:justify-self-end md:text-right">
-            <p className="text-base font-black text-white">Ashwani Kumar</p>
             <div className="flex flex-wrap gap-x-4 gap-y-2 md:justify-end">
               <a href="tel:+918308837348" className="transition hover:text-white">
                 +91 83088 37348
