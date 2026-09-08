@@ -28,10 +28,6 @@ export default function SiteHeader() {
 
   return (
     <>
-      <div className="bg-[#075ee8] px-4 py-2 text-center text-xs font-bold text-white sm:px-5 sm:text-sm">
-        Upload your brief for a fast creative estimate
-      </div>
-
       <header className="sticky top-0 z-50 border-b border-[#cbdcfb] bg-[linear-gradient(110deg,rgba(255,255,255,0.96)_0%,rgba(245,248,255,0.96)_45%,rgba(222,233,255,0.94)_100%)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-8 sm:py-4 lg:gap-5 lg:px-10">
           <Link
