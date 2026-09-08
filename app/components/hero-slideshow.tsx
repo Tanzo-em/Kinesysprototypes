@@ -27,25 +27,17 @@ export default function HeroSlideshow({ slides }: { slides: Slide[] }) {
       return;
     }
     if (slides[active].video && video) {
-      // Keep the video visible until it finishes, even on a slow connection.
-      let cancelled = false;
-      let fallbackTimer: number | undefined;
-      void video.play().catch(() => {
-        if (cancelled) return;
-        fallbackTimer = window.setTimeout(() => {
-          setActive((index) => (index + 1) % slides.length);
-        }, 5000);
-      });
-      return () => {
-        cancelled = true;
-        window.clearTimeout(fallbackTimer);
-        video.pause();
-      };
+      video.currentTime = 0;
+      // Autoplay restrictions still allow the slideshow timer to advance.
+      void video.play().catch(() => {});
     }
     const timer = window.setTimeout(() => {
       setActive((index) => (index + 1) % slides.length);
-    }, 5000);
-    return () => window.clearTimeout(timer);
+    }, slides[active].video ? 3000 : 5000);
+    return () => {
+      window.clearTimeout(timer);
+      video?.pause();
+    };
   }, [active, reducedMotion, slides]);
 
   return (
