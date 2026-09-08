@@ -13,31 +13,40 @@ function subscribeToMotion(callback: () => void) {
 
 export default function HeroSlideshow({ slides }: { slides: Slide[] }) {
   const [active, setActive] = useState(0);
-  const [playing, setPlaying] = useState<boolean | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const reducedMotion = useSyncExternalStore(
     subscribeToMotion,
     () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     () => true,
   );
-  const isPlaying = playing ?? !reducedMotion;
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!isPlaying) {
+    if (reducedMotion) {
       video?.pause();
       return;
     }
     if (slides[active].video && video) {
       // Keep the video visible until it finishes, even on a slow connection.
-      void video.play().catch(() => setPlaying(false));
-      return () => video.pause();
+      let cancelled = false;
+      let fallbackTimer: number | undefined;
+      void video.play().catch(() => {
+        if (cancelled) return;
+        fallbackTimer = window.setTimeout(() => {
+          setActive((index) => (index + 1) % slides.length);
+        }, 5000);
+      });
+      return () => {
+        cancelled = true;
+        window.clearTimeout(fallbackTimer);
+        video.pause();
+      };
     }
     const timer = window.setTimeout(() => {
       setActive((index) => (index + 1) % slides.length);
     }, 5000);
     return () => window.clearTimeout(timer);
-  }, [active, isPlaying, slides]);
+  }, [active, reducedMotion, slides]);
 
   return (
     <>
@@ -70,14 +79,6 @@ export default function HeroSlideshow({ slides }: { slides: Slide[] }) {
           )}
         </div>
       ))}
-      <button
-        type="button"
-        onClick={() => setPlaying(!isPlaying)}
-        className="absolute bottom-4 right-4 z-20 rounded-lg border border-white/60 bg-black/50 px-4 py-2 text-sm font-semibold text-white"
-        aria-label={isPlaying ? "Pause hero slideshow" : "Play hero slideshow"}
-      >
-        {isPlaying ? "Pause" : "Play"}
-      </button>
     </>
   );
 }
