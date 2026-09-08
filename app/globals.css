@@ -30,7 +30,7 @@ body {
 }
 
 .hero-slide {
-  animation: hero-slide 25s infinite;
+  animation: hero-slide 30s infinite;
   opacity: 0;
 }
 
@@ -86,15 +86,15 @@ textarea {
     opacity: 0;
   }
 
-  4% {
+  3.333% {
+    opacity: 1;
+  }
+
+  16.667% {
     opacity: 1;
   }
 
   20% {
-    opacity: 1;
-  }
-
-  24% {
     opacity: 0;
   }
 

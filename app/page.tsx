@@ -5,6 +5,11 @@ import SiteHeader from "./components/site-header";
 
 const heroSlides = [
   {
+    title: "CNC machining in action",
+    video: "/hero/cnc-muted.mp4",
+    image: "/hero/cnc-poster.jpg",
+  },
+  {
     title: "Industrial additive manufacturing system",
     image: "/hero/industrial-printer.png",
   },
@@ -160,14 +165,28 @@ export default function Home() {
               className="hero-slide absolute inset-0"
               style={{ animationDelay: `${index * 5}s` }}
             >
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                priority={index === 0}
-                sizes="100vw"
-                className="object-cover object-center"
-              />
+              {slide.video ? (
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  poster={slide.image}
+                  aria-label={slide.title}
+                  className="h-full w-full object-cover object-center"
+                >
+                  <source src={slide.video} type="video/mp4" />
+                </video>
+              ) : (
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  sizes="100vw"
+                  className="object-cover object-center"
+                />
+              )}
             </div>
           ))}
 
