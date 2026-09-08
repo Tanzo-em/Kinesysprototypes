@@ -36,7 +36,7 @@ const services = [
   {
     title: "Product Design",
     href: "/services/product-design",
-    image: "/figma/car-sketch.jpg",
+    image: "/product-design/motorcycle-component-design.png",
     copy: "We craft intuitive and visually appealing designs that enhance user engagement and align with your brand identity.",
   },
   {

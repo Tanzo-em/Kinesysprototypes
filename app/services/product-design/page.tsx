@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Product Design Services in Pune",
     description: "Transform product ideas into production-ready designs with concept development, CAD, surfacing, and prototyping support.",
     url: "/services/product-design",
-    images: ["/figma/car-sketch.jpg"],
+    images: ["/product-design/motorcycle-component-design.png"],
   },
 };
 
@@ -56,8 +56,8 @@ export default function ProductDesignPage() {
       title="Product Design"
       eyebrow="Design with purpose"
       description="We turn early ideas into intuitive, visually compelling products. Our process balances user needs, brand identity, usability, and manufacturability so every design is ready for meaningful testing and development."
-      image="/figma/car-sketch.jpg"
-      imageAlt="Automotive product design sketch"
+      image="/product-design/motorcycle-component-design.png"
+      imageAlt="Motorcycle component design sketches showing headlamp, suspension, seat and footpeg concepts"
       compactHero
       hideDeliverables
       deliverables={[
