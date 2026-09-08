@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HeroSlideshow from "./components/hero-slideshow";
 import ImagineProcess from "./components/imagine-process";
 import { QuoteButton } from "./components/quote-modal";
 import SiteHeader from "./components/site-header";
@@ -159,36 +160,7 @@ export default function Home() {
 
       <section className="w-full bg-black">
         <div className="relative min-h-[460px] w-full overflow-hidden bg-black shadow-[0_30px_90px_rgba(22,28,45,0.22)] sm:min-h-[620px]">
-          {heroSlides.map((slide, index) => (
-            <div
-              key={slide.title}
-              className="hero-slide absolute inset-0"
-              style={{ animationDelay: `${index * 5}s` }}
-            >
-              {slide.video ? (
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  poster={slide.image}
-                  aria-label={slide.title}
-                  className="h-full w-full object-cover object-center"
-                >
-                  <source src={slide.video} type="video/mp4" />
-                </video>
-              ) : (
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  sizes="100vw"
-                  className="object-cover object-center"
-                />
-              )}
-            </div>
-          ))}
+          <HeroSlideshow slides={heroSlides} />
 
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_42%,rgba(0,0,0,0.18)_68%,rgba(0,0,0,0.72)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,12,18,0.72)_0%,rgba(8,12,18,0.38)_36%,transparent_62%)]" />
